@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-experimental: {
-	optimizeCss: false
+	experimental: {
+    optimizeCss: false, // Desactiva
 }
-};
-
+}
 export default nextConfig;
