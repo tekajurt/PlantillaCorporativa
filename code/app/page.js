@@ -1,7 +1,9 @@
 import Image from "next/image";
-
+import Hero from "./sections/hero";
 export default function Home() {
   return (
-  	<p className={"flex flex-col"} >hola</p>  
+	  <div>	
+	  	<Hero />
+	  </div>
   );
 }
