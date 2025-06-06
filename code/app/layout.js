@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
 		{/*<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>*/}
 	</head>	  
-      <body className="w-full flex flex-col relative min-h-screen" >
+      <body className="w-full flex flex-col relative min-h-screen text-white" >
         <Nav />
         <div className="flex-1 flex w-full">
         {children}
