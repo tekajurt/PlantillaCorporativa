@@ -1,11 +1,11 @@
-
-
-const section = ({id,className, children }) => {
-	const clase = className ? className  + " flex w-full h-screen bg-gradient-to-r from-blue-900 to-blue-700 items-center justify-center relative "  : " flex w-full h-screen bg-gradient-to-r from-blue-900 to-blue-700 items-center  relative " ;
-	return (
-		<div id={id?id:"none"} className={clase}>
-			{children}
-		</div>
-	)
-}
+const section = ({ id, className, children }) => {
+  return (
+    <div
+      id={id ? id : "none"}
+      className="flex flex-col gap-2 w-full min-h-screen justify-center items-center relative"
+    >
+      {children}
+    </div>
+  );
+};
 export default section;

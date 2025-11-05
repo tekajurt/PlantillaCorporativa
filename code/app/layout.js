@@ -9,18 +9,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-	<head>
-		{/*<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+      <head>
+        {/*<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>*/}
-	</head>	  
-      <body className="w-full flex flex-col relative min-h-screen text-white" >
+      </head>
+      <body className="w-full flex flex-col h-full text-center bg-linear-to-r from-blue-900 to-blue-700  text-white">
         <Nav />
-        <div className="flex-1 flex w-full">
-        {children}
-        </div>
+        <div className="flex-1 w-full h-full pt-8 items-center">{children}</div>
         <Footer />
-          
-
       </body>
     </html>
   );

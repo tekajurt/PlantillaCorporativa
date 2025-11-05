@@ -1,34 +1,38 @@
 import Section from "../componentes/section";
 import Image from "next/image";
+import { loremIpsum } from "lorem-ipsum";
+
 const nosotros = () => {
-    return (
-        <Section id="nosotros" className={"block flex-col"} >
-          
-            <h2 className="text-3xl font-bold">Nosotros</h2>
-            <div className="flex ">
+  return (
+    <Section id="nosotros">
+      <h2 className="text-3xl font-bold">Quienes somos</h2>
+      <p className="text-sm">{loremIpsum({ count: 3 })}</p>
+      <div className="flex flex-col text-center mt-8 ">
+        <h3 className="text-2xl font-bold">Nuestra historia</h3>
 
-              <div className="flex flex-col text-center w-1/2 ">
-                <p className="text-lg mb-6">
-                  Somos una empresa dedicada a ofrecer soluciones innovadoras y personalizadas para nuestros clientes. Nuestro equipo está compuesto por profesionales altamente capacitados que trabajan con pasión y compromiso para superar las expectativas.  
-                </p>
-                <p className="text-lg mb-6">
-                  Con años de experiencia en el sector, nos especializamos en brindar servicios de alta calidad que se adaptan a las necesidades específicas de cada cliente. Nuestra misión es ayudar a las empresas a alcanzar sus objetivos y crecer en un entorno competitivo.
-                </p>
-              </div>
+        <p className="text-sm mb-6">{loremIpsum({ count: 3 })}</p>
+        <h3 className="text-2xl font-bold">Integrantes fundadores</h3>
 
-              <div className="  relative w-1/2 flex justify-center items-center">
-
-                <Image
-                  src="/favicon.ico"
-                  alt="Imagen de Nosotros"
-                  width={500}
-                  height={300}
-                  className="w-full"
-                  />
-                </div>
-              </div>
-
-            </Section>
-    )
-}
+        <p className="text-lg mb-6">Integrante 1</p>
+        <p className="text-lg mb-6">Integrante 2</p>
+        <p className="text-lg mb-6">Integrante 3</p>
+      </div>
+      <div>
+        <h3 className="text-2xl font-bold">Mision</h3>
+        <p className="text-sm">{loremIpsum({ count: 3 })}</p>
+        <h3 className="text-2xl font-bold">Vision</h3>
+        <p className="text-sm">{loremIpsum({ count: 3 })}</p>
+      </div>
+      <div className="  relative w-1/2 flex justify-center items-center">
+        <Image
+          src="/favicon.ico"
+          alt="Imagen de Nosotros"
+          width={500}
+          height={300}
+          className="max-w-fit"
+        />
+      </div>
+    </Section>
+  );
+};
 export default nosotros;
