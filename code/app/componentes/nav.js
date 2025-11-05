@@ -7,7 +7,7 @@ const Nav = () => {
     };
     return (
     
-    <nav className="bg-white shadow-md fixed ms-2 mt-2 rounded z-10">
+    <nav className="bg-white fixed ms-2 mt-2 rounded z-10">
         <button onClick={() => toggleMenu()} className="flex items-center px-2 py-1 z-1 border rounded text-black hover:text-blue-600" aria-label="Abrir menú">
           <svg className="w-6 h-6" fill="" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
         </button>
@@ -23,7 +23,7 @@ const Nav = () => {
                 <a href="#servicios" className="text-gray-700 hover:text-blue-600">Servicios</a>
                 </li>
                 <li>
-                <a href="#ventajas" className="text-gray-700 hover:text-blue-600">Ventajas</a>
+                <a href="#ventajas" className="text-gray-700 hover:text-blue-600">Ventajas</a>1
                 </li>
                 <li>
                 <a href="#equipo" className="text-gray-700 hover:text-blue-600">Equipo</a>
