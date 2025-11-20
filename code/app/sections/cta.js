@@ -9,7 +9,13 @@ const cta = () => {
       <p className="mb-6 text-gray-700 dark:text-gray-300">
         Únete a nuestras actividades y forma parte de la comunidad.
       </p>
-      {/* TODO: Agregar botón de acción con accesibilidad y estilos responsivos */}
+      <button
+        type="button"
+        className="inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        aria-label="Participar ahora"
+      >
+        Participar ahora
+      </button>
     </Section>
   );
 };

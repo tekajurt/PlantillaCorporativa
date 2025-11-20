@@ -3,7 +3,7 @@ import Section from "../componentes/section";
 
 const equipo = () => {
   return (
-    <Section id="equipo">
+    <Section id="cuerpos">
       <h2 className="text-3xl font-bold">Cuerpos del carnaval</h2>
       <p>{loremIpsum({ count: 3 })}</p>
       <div className="w-full bg-green-500 p-4 rounded-md text-white shadow-md mt-4">

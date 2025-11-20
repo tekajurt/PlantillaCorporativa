@@ -1,5 +1,5 @@
 import "./globals.css";
-import Nav from "./componentes/nav";
+import Header from "../components/Header";
 import Footer from "./componentes/footer";
 
 export default function RootLayout({ children }) {
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <script>eruda.init();</script>*/}
       </head>
       <body className="min-h-screen w-full flex flex-col text-center bg-linear-to-r from-blue-900 to-blue-700 text-white">
-        <Nav />
+        <Header />
         <div className="flex-1 w-full pt-8 items-center">{children}</div>
         <Footer />
       </body>
