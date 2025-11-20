@@ -12,25 +12,26 @@ const Hero = () => {
   return (
     <Section id="hero" title="Bienvenido">
       {/* HERO CONTENT */}
-      <div className="flex flex-col justify-center text-center gap-4 ">
+      <div className="flex flex-col justify-center text-center gap-4">
         <Image
+          loading="eager"
           src="/favicon.ico"
           alt="Hero Image"
           width={500}
           height={300}
-          className="rounded-lg shadow-lg max-w-fit mx-auto"
+          className="rounded-lg shadow-lg max-w-xs sm:max-w-md mx-auto"
         />
-        <h1 className=" text-4xl md:text-6xl font-extrabold drop-shadow-lg self-center">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold drop-shadow-lg self-center">
           Bienvenido a <span className="text-blue-200"> __Cliente__</span>
         </h1>
       </div>
-      <p className="text-lg md:text-xl text-gray-200 mt-12 max-w-2xl">
+      <p className="text-base sm:text-lg md:text-xl text-gray-200 mt-8 sm:mt-12 max-w-xs sm:max-w-2xl mx-auto">
         Descubre nuestros servicios y cómo podemos ayudarte a alcanzar tus
         objetivos.
       </p>
 
       {/**\ Carousel */}
-      <Carousel className="w-1/2 max-w-md">
+      <Carousel className="w-full max-w-md mx-auto mt-8">
         <CarouselContent>
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
             <Image

@@ -23,13 +23,13 @@ const nosotros = () => {
         <h3 className="text-2xl font-bold">Vision</h3>
         <p className="text-sm">{loremIpsum({ count: 3 })}</p>
       </div>
-      <div className="  relative w-1/2 flex justify-center items-center">
+      <div className="relative w-full md:w-1/2 flex justify-center items-center mx-auto mt-8">
         <Image
           src="/favicon.ico"
           alt="Imagen de Nosotros"
           width={500}
           height={300}
-          className="max-w-fit"
+          className="max-w-xs sm:max-w-md rounded-lg shadow-lg"
         />
       </div>
     </Section>

@@ -41,15 +41,19 @@ function Button({
   variant,
   size,
   asChild = false,
+  type,
   ...props
 }) {
-  const Comp = asChild ? Slot : "button"
-
+  const Comp = asChild ? Slot : "button";
+  // Si es un botón nativo y no se especifica type, usar type="button" para evitar submit accidental
+  const extraProps = !asChild && !type ? { type: "button" } : {};
   return (
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
-      {...props} />
+      {...extraProps}
+      {...props}
+    />
   );
 }
 
