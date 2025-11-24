@@ -1,12 +1,10 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const ROOT = path.join(__dirname, '..');
-const CODE_DIR = path.join(ROOT, '..'); // repository root / code is one level up from scripts
-const TARGET_DIR = path.join(ROOT, '..', 'code');
-// but __dirname is code/scripts, so simpler:
-const CODE = path.join(__dirname, '..');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 function walk(dir, exts = ['.js', '.jsx', '.ts', '.tsx']) {
   const results = [];
@@ -25,7 +23,6 @@ function walk(dir, exts = ['.js', '.jsx', '.ts', '.tsx']) {
 
 function normalizePublicPath(p) {
   if (!p) return p;
-  // strip query/hash
   return p.split('?')[0].split('#')[0];
 }
 
@@ -40,10 +37,7 @@ function main() {
   const files = walk(path.join(__dirname, '..'));
   const required = new Set();
 
-  // gather static string src="/..." occurrences
   const srcRegex = /src\s*=\s*(["'`])(\/[^"'`>]+)\1/g;
-
-  // import <id> from '....(png|jpg|jpeg|svg|ico)'
   const importRegex =
     /import\s+(?:([A-Za-z0-9_$]+)\s+from\s+)?["']([^"']+\.(?:png|jpe?g|svg|ico))["']/g;
 
@@ -56,7 +50,6 @@ function main() {
       if (p && p.startsWith('/')) required.add(p);
     }
 
-    // handle imported images used as identifiers: import foo from './favicon.ico' and src={foo}
     const imports = {};
     while ((m = importRegex.exec(text)) !== null) {
       const id = m[1];
@@ -65,14 +58,12 @@ function main() {
       if (id) imports[id] = basename;
     }
 
-    // find usages src={identifier}
     for (const [id, basename] of Object.entries(imports)) {
       const usageRegex = new RegExp('src\\s*=\\s*\\{\\s*' + id + '\\s*\\}', 'g');
       if (usageRegex.test(text)) required.add(basename);
     }
   }
 
-  // Now validate each required path exists in blurMap
   const missing = [];
   for (const p of required) {
     const norm = normalizePublicPath(p);
