@@ -1,25 +1,20 @@
-import { loremIpsum } from "lorem-ipsum";
-import Section from "../componentes/section";
+// import { loremIpsum } from "lorem-ipsum"; // removed: not used
+import Section from '../componentes/section';
 
 const equipo = () => {
   return (
     <Section id="cuerpos">
       <h2 className="text-3xl font-bold">Cuerpos del carnaval</h2>
       <p className="mt-2">
-        Nuestra escuela se organiza en tres cuerpos principales. Cada uno tiene
-        identidad, talleres y calendario propio. Selecciona un cuerpo para
-        conocer más.
+        Nuestra escuela se organiza en tres cuerpos principales. Cada uno tiene identidad, talleres
+        y calendario propio. Selecciona un cuerpo para conocer más.
       </p>
 
-      <div
-        id="figuras"
-        className="w-full bg-green-600 p-6 rounded-md text-white shadow-md mt-6"
-      >
+      <div id="figuras" className="w-full bg-green-600 p-6 rounded-md text-white shadow-md mt-6">
         <h3 className="text-2xl font-bold">Figuras</h3>
         <p className="mt-2">
-          Las figuras representan el alma visual del desfile. Trabajan en
-          vestuario, estructuras y presencia escénica. Ofrecemos talleres de
-          diseño de vestuario y manejo de estructuras.
+          Las figuras representan el alma visual del desfile. Trabajan en vestuario, estructuras y
+          presencia escénica. Ofrecemos talleres de diseño de vestuario y manejo de estructuras.
         </p>
         <p className="mt-3 font-semibold">Talleres y ensayos:</p>
         <ul className="list-disc list-inside">
@@ -28,14 +23,11 @@ const equipo = () => {
         </ul>
       </div>
 
-      <div
-        id="baile"
-        className="w-full bg-red-600 p-6 rounded-md text-white shadow-md mt-6"
-      >
+      <div id="baile" className="w-full bg-red-600 p-6 rounded-md text-white shadow-md mt-6">
         <h3 className="text-2xl font-bold">Baile</h3>
         <p className="mt-2">
-          El cuerpo de baile se encarga de la coreografía y el movimiento.
-          Practicamos distintos estilos y formamos grupos por niveles.
+          El cuerpo de baile se encarga de la coreografía y el movimiento. Practicamos distintos
+          estilos y formamos grupos por niveles.
         </p>
         <p className="mt-3 font-semibold">Clases y horarios:</p>
         <ul className="list-disc list-inside">
@@ -44,15 +36,11 @@ const equipo = () => {
         </ul>
       </div>
 
-      <div
-        id="banda"
-        className="w-full bg-yellow-300 p-6 rounded-md text-black shadow-md mt-6"
-      >
+      <div id="banda" className="w-full bg-yellow-300 p-6 rounded-md text-black shadow-md mt-6">
         <h3 className="text-2xl font-bold">Banda</h3>
         <p className="mt-2">
-          La banda aporta el ritmo y la energía. Contamos con secciones de
-          percusión, vientos y bronces. Ofrecemos espacios para ensayos y
-          formación musical.
+          La banda aporta el ritmo y la energía. Contamos con secciones de percusión, vientos y
+          bronces. Ofrecemos espacios para ensayos y formación musical.
         </p>
         <p className="mt-3 font-semibold">Ensayos:</p>
         <ul className="list-disc list-inside">

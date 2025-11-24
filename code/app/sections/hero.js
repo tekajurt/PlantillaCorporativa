@@ -1,7 +1,7 @@
 'use client';
 import Section from '../componentes/section.js';
 import Image from 'next/image';
-import blurMap from '../../lib/blur-placeholders.json';
+// import blurMap from '../../lib/blur-placeholders.json'; // removed: unused, use getBlur helper
 import getBlur from '../../lib/getBlur';
 import {
   Carousel,

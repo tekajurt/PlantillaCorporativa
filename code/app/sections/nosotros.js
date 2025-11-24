@@ -1,8 +1,8 @@
 import Section from '../componentes/section';
 import Image from 'next/image';
-import blurMap from '../../lib/blur-placeholders.json';
+// import blurMap from '../../lib/blur-placeholders.json'; // removed: unused
 import getBlur from '../../lib/getBlur';
-import { loremIpsum } from 'lorem-ipsum';
+// import { loremIpsum } from 'lorem-ipsum'; // removed: not used
 
 const nosotros = () => {
   return (

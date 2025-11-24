@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Section from '../componentes/section';
 import Card from '../../components/Card';
 import GalleryModal from '../../components/ui/GalleryModal';
-import blurMap from '../../lib/blur-placeholders.json';
+// import blurMap from '../../lib/blur-placeholders.json'; // removed: unused, using getBlur helper
 import getBlur from '../../lib/getBlur';
 
 const Galeria = () => {
