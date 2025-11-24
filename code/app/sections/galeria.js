@@ -4,24 +4,29 @@ import Card from "../../components/Card";
 const ventajas = () => {
   const items = [
     {
-      title: "Evento 1",
+      title: "Desfile 2025",
       image: "/file.svg",
-      children: "Descripción breve del evento 1.",
+      children: "Momentos destacados del desfile 2025: color y creatividad.",
     },
     {
-      title: "Evento 2",
+      title: "Taller de vestuario",
       image: "/globe.svg",
-      children: "Descripción breve del evento 2.",
+      children:
+        "Imágenes del taller de construcción de estructuras y máscaras.",
     },
     {
-      title: "Evento 3",
+      title: "Ensayo de la banda",
       image: "/window.svg",
-      children: "Descripción breve del evento 3.",
+      children: "Grabaciones y fotos de la sección musical en acción.",
     },
   ];
   return (
     <Section id="galeria">
-      <h2 className="text-2xl font-bold mb-4">Galería de multimedia</h2>
+      <h2 className="text-2xl font-bold mb-4">Galería multimedia</h2>
+      <p className="mb-4">
+        Fotos y videos organizados por año y por cuerpo (Figuras, Baile, Banda).
+        Aquí mostramos una selección reciente.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {items.map((item, idx) => (
           <Card key={idx} title={item.title} image={item.image}>

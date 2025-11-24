@@ -1,3 +1,4 @@
+"use client";
 import Section from "../componentes/section";
 import Input from "../../components/ui/Input";
 import Textarea from "../../components/ui/Textarea";
@@ -8,9 +9,26 @@ const contacto = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-gray-900 dark:text-white">
         Contacto
       </h2>
-      <form className="space-y-4" autoComplete="off">
+      <p className="text-center mb-4">
+        Escríbenos para consultas sobre inscripciones, talleres o
+        presentaciones.
+      </p>
+      <form
+        className="space-y-4"
+        autoComplete="off"
+        onSubmit={(e) => {
+          e.preventDefault();
+          alert("Formulario enviado (ejemplo)");
+        }}
+      >
         <Input id="nombre" label="Nombre" name="nombre" required />
-        <Input id="email" label="Email" name="email" type="email" required />
+        <Input
+          id="email"
+          label="Correo electrónico"
+          name="email"
+          type="email"
+          required
+        />
         <Textarea
           id="mensaje"
           label="Mensaje"
@@ -25,6 +43,32 @@ const contacto = () => {
           Enviar
         </button>
       </form>
+
+      <div className="mt-6 text-sm text-center">
+        <p>
+          Correo institucional:{" "}
+          <a
+            href="mailto:info@carnaval-arcoiris.org"
+            className="text-indigo-600"
+          >
+            info@carnaval-arcoiris.org
+          </a>
+        </p>
+        <p className="mt-2">
+          Síguenos:{" "}
+          <a href="#" className="underline">
+            Instagram
+          </a>{" "}
+          ·{" "}
+          <a href="#" className="underline">
+            Facebook
+          </a>{" "}
+          ·{" "}
+          <a href="#" className="underline">
+            YouTube
+          </a>
+        </p>
+      </div>
     </Section>
   );
 };

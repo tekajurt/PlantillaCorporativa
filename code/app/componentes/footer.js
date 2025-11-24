@@ -1,12 +1,28 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-4 mt-auto">
+    <footer className="bg-gray-800 text-white py-6 mt-auto">
       <div className="container mx-auto text-center px-4">
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Your Company Name. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Escuela de Carnaval Arcoíris. Todos
+          los derechos reservados.
         </p>
-        <p className="text-xs mt-2">Made with ❤️ by Your Name</p>
+        <p className="text-xs mt-2">
+          Contacto:{" "}
+          <a href="mailto:info@carnaval-arcoiris.org" className="underline">
+            info@carnaval-arcoiris.org
+          </a>
+        </p>
+        <div className="mt-3 flex justify-center gap-4">
+          <a href="#" aria-label="Instagram" className="text-pink-400">
+            Instagram
+          </a>
+          <a href="#" aria-label="Facebook" className="text-blue-400">
+            Facebook
+          </a>
+          <a href="#" aria-label="YouTube" className="text-red-400">
+            YouTube
+          </a>
+        </div>
       </div>
     </footer>
   );
