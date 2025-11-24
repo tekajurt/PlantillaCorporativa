@@ -24,6 +24,10 @@ jobs:
         run: npm ci
         working-directory: ./code
 
+      - name: Run unit tests
+        run: npm run test:unit
+        working-directory: ./code
+
       - name: Run lint
         run: npm run lint
         working-directory: ./code
@@ -32,6 +36,6 @@ jobs:
         run: npm run build
         working-directory: ./code
 
-      - name: Run tests
+      - name: Run tests (full)
         run: npm test
         working-directory: ./code

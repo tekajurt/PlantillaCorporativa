@@ -25,6 +25,7 @@ const Hero = () => {
           className="rounded-lg shadow-lg w-full max-w-2xl mx-auto object-cover"
           placeholder="blur"
           blurDataURL={getBlur('/vercel.svg')}
+          priority
         />
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold drop-shadow-lg self-center">
           Escuela de Carnaval <span className="text-pink-300">Arcoíris</span>

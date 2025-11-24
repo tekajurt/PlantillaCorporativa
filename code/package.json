@@ -15,6 +15,7 @@
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
     "test": "jest --passWithNoTests",
+    "test:unit": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "ci": "npm run lint && npm run build && npm test"
   },
