@@ -1,0 +1,58 @@
+name: Generate and validate blur placeholders
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  generate-blur:
+    name: Generate blur placeholders
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies (code/)
+        working-directory: code
+        run: npm ci
+
+      - name: Run generate-blur script
+        working-directory: code
+        run: npm run generate-blur
+
+      - name: Validate blur-placeholders.json
+        working-directory: code
+        run: |
+          node -e "
+          const path = require('path');
+          const map = require('./lib/blur-placeholders.json');
+          if (!map || typeof map !== 'object') {
+            console.error('blur-placeholders.json missing or invalid');
+            process.exit(1);
+          }
+          const keys = Object.keys(map);
+          if (keys.length === 0) {
+            console.error('blur-placeholders.json is empty');
+            process.exit(1);
+          }
+          for (const [k,v] of Object.entries(map)) {
+            if (typeof v !== 'string' || !v.startsWith('data:')) {
+              console.error(`Invalid blur value for ${k}`);
+              process.exit(1);
+            }
+          }
+          console.log(`Validated ${keys.length} blur placeholders`);
+          "
+
+      - name: Validate blur usage across code
+        working-directory: code
+        run: |
+          node ./scripts/ci-validate-blur.js

@@ -1,7 +1,7 @@
-"use client";
-import Section from "../componentes/section";
-import Input from "../../components/ui/Input";
-import Textarea from "../../components/ui/Textarea";
+'use client';
+import Section from '../componentes/section';
+import Input from '../../components/ui/Input';
+import Textarea from '../../components/ui/Textarea';
 
 const contacto = () => {
   return (
@@ -10,32 +10,19 @@ const contacto = () => {
         Contacto
       </h2>
       <p className="text-center mb-4">
-        Escríbenos para consultas sobre inscripciones, talleres o
-        presentaciones.
+        Escríbenos para consultas sobre inscripciones, talleres o presentaciones.
       </p>
       <form
         className="space-y-4"
         autoComplete="off"
         onSubmit={(e) => {
           e.preventDefault();
-          alert("Formulario enviado (ejemplo)");
+          alert('Formulario enviado (ejemplo)');
         }}
       >
         <Input id="nombre" label="Nombre" name="nombre" required />
-        <Input
-          id="email"
-          label="Correo electrónico"
-          name="email"
-          type="email"
-          required
-        />
-        <Textarea
-          id="mensaje"
-          label="Mensaje"
-          name="mensaje"
-          rows={4}
-          required
-        />
+        <Input id="email" label="Correo electrónico" name="email" type="email" required />
+        <Textarea id="mensaje" label="Mensaje" name="mensaje" rows={4} required />
         <button
           type="submit"
           className="w-full py-2 px-4 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -46,25 +33,37 @@ const contacto = () => {
 
       <div className="mt-6 text-sm text-center">
         <p>
-          Correo institucional:{" "}
-          <a
-            href="mailto:info@carnaval-arcoiris.org"
-            className="text-indigo-600"
-          >
+          Correo institucional:{' '}
+          <a href="mailto:info@carnaval-arcoiris.org" className="text-indigo-600">
             info@carnaval-arcoiris.org
           </a>
         </p>
         <p className="mt-2">
-          Síguenos:{" "}
-          <a href="#" className="underline">
+          Síguenos:{' '}
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
             Instagram
-          </a>{" "}
-          ·{" "}
-          <a href="#" className="underline">
+          </a>{' '}
+          ·{' '}
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
             Facebook
-          </a>{" "}
-          ·{" "}
-          <a href="#" className="underline">
+          </a>{' '}
+          ·{' '}
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
             YouTube
           </a>
         </p>

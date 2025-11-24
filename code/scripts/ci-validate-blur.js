@@ -1,0 +1,98 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.join(__dirname, '..');
+const CODE_DIR = path.join(ROOT, '..'); // repository root / code is one level up from scripts
+const TARGET_DIR = path.join(ROOT, '..', 'code');
+// but __dirname is code/scripts, so simpler:
+const CODE = path.join(__dirname, '..');
+
+function walk(dir, exts = ['.js', '.jsx', '.ts', '.tsx']) {
+  const results = [];
+  const list = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of list) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      if (['node_modules', '.next', '.git'].includes(entry.name)) continue;
+      results.push(...walk(full, exts));
+    } else {
+      if (exts.includes(path.extname(entry.name))) results.push(full);
+    }
+  }
+  return results;
+}
+
+function normalizePublicPath(p) {
+  if (!p) return p;
+  // strip query/hash
+  return p.split('?')[0].split('#')[0];
+}
+
+function main() {
+  const blurPath = path.join(__dirname, '..', 'lib', 'blur-placeholders.json');
+  if (!fs.existsSync(blurPath)) {
+    console.error('Missing blur-placeholders.json at', blurPath);
+    process.exit(1);
+  }
+  const blurMap = JSON.parse(fs.readFileSync(blurPath, 'utf8'));
+
+  const files = walk(path.join(__dirname, '..'));
+  const required = new Set();
+
+  // gather static string src="/..." occurrences
+  const srcRegex = /src\s*=\s*(["'`])(\/[^"'`>]+)\1/g;
+
+  // import <id> from '....(png|jpg|jpeg|svg|ico)'
+  const importRegex =
+    /import\s+(?:([A-Za-z0-9_$]+)\s+from\s+)?["']([^"']+\.(?:png|jpe?g|svg|ico))["']/g;
+
+  for (const file of files) {
+    const text = fs.readFileSync(file, 'utf8');
+
+    let m;
+    while ((m = srcRegex.exec(text)) !== null) {
+      const p = normalizePublicPath(m[2]);
+      if (p && p.startsWith('/')) required.add(p);
+    }
+
+    // handle imported images used as identifiers: import foo from './favicon.ico' and src={foo}
+    const imports = {};
+    while ((m = importRegex.exec(text)) !== null) {
+      const id = m[1];
+      const imp = m[2];
+      const basename = '/' + path.basename(imp);
+      if (id) imports[id] = basename;
+    }
+
+    // find usages src={identifier}
+    for (const [id, basename] of Object.entries(imports)) {
+      const usageRegex = new RegExp('src\\s*=\\s*\\{\\s*' + id + '\\s*\\}', 'g');
+      if (usageRegex.test(text)) required.add(basename);
+    }
+  }
+
+  // Now validate each required path exists in blurMap
+  const missing = [];
+  for (const p of required) {
+    const norm = normalizePublicPath(p);
+    if (!blurMap[norm]) missing.push(norm);
+  }
+
+  if (missing.length > 0) {
+    console.error('Missing blur placeholders for the following paths:');
+    for (const m of missing) console.error('  -', m);
+    console.error(
+      '\nRun `npm run generate-blur` to regenerate placeholders or add entries to lib/blur-placeholders.json'
+    );
+    process.exit(1);
+  }
+
+  console.log(
+    'All static image src references were found in lib/blur-placeholders.json —',
+    required.size,
+    'checked'
+  );
+}
+
+main();

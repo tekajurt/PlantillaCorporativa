@@ -1,7 +1,6 @@
-
-FDGRTC%E$V|RTRT|RTtttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttcggggggggggggggg"use client";
-import { useState } from "react";
-import NavLink from "./NavLink";
+'use client';
+import { useState } from 'react';
+import NavLink from './NavLink';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -26,18 +25,14 @@ const Nav = () => {
           viewBox="0 0 24 24"
           aria-hidden="true"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
       {/* Menú de navegación */}
       <div
         id="main-menu"
         className={`absolute top-full left-0 w-full bg-white shadow-md transition-transform duration-300 md:static md:w-auto md:bg-transparent md:shadow-none md:transition-none ${
-          open ? "translate-y-0" : "-translate-y-96"
+          open ? 'translate-y-0' : '-translate-y-96'
         } md:translate-y-0 flex flex-col md:flex-row md:items-center md:space-x-6`}
         style={{ zIndex: 9 }}
       >

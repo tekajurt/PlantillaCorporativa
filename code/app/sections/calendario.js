@@ -1,5 +1,5 @@
-"use client";
-import Section from "../componentes/section";
+'use client';
+import Section from '../componentes/section';
 
 const servicios = () => {
   return (
@@ -8,8 +8,8 @@ const servicios = () => {
         Calendario y actividades
       </h2>
       <p className="text-center mb-6">
-        Consulta la agenda de ensayos, talleres y presentaciones. Añade los
-        eventos importantes a tu calendario personal.
+        Consulta la agenda de ensayos, talleres y presentaciones. Añade los eventos importantes a tu
+        calendario personal.
       </p>
       <ul className="space-y-4 text-left">
         <li>
@@ -26,16 +26,14 @@ const servicios = () => {
         </li>
       </ul>
       <div className="mt-6 text-center">
-        <a
+        <button
           className="inline-block px-4 py-2 bg-indigo-600 text-white rounded"
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            alert("Función de agregar al calendario (placeholder)");
+          onClick={() => {
+            alert('Función de agregar al calendario (placeholder)');
           }}
         >
           Agregar al calendario
-        </a>
+        </button>
       </div>
     </Section>
   );
