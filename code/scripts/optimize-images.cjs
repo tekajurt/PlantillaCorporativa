@@ -44,7 +44,11 @@ async function processFile(file) {
     const avifOut = path.join(outDir, `${base}.avif`);
     await src.clone().avif({ quality: 50 }).toFile(avifOut);
 
-    return { file: rel, webp: path.relative(PUBLIC_DIR, webpOut), avif: path.relative(PUBLIC_DIR, avifOut) };
+    return {
+      file: rel,
+      webp: path.relative(PUBLIC_DIR, webpOut),
+      avif: path.relative(PUBLIC_DIR, avifOut),
+    };
   } catch (err) {
     console.error('Failed to process', file, err);
     return null;
@@ -59,8 +63,8 @@ async function main() {
 
   ensureDir(OUT_DIR);
   console.log('Scanning public directory for images...');
-  const files = walk(PUBLIC_DIR).filter(f => !f.includes(path.sep + '_optimized' + path.sep));
-  const images = files.filter(f => SUPPORTED.includes(path.extname(f).toLowerCase()));
+  const files = walk(PUBLIC_DIR).filter((f) => !f.includes(path.sep + '_optimized' + path.sep));
+  const images = files.filter((f) => SUPPORTED.includes(path.extname(f).toLowerCase()));
   console.log(`Found ${images.length} images to optimize.`);
 
   const results = [];
@@ -83,7 +87,7 @@ async function main() {
   console.log('Optimized files are under public/_optimized/ (same structure as public/)');
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error(err);
   process.exit(1);
 });

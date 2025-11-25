@@ -11,8 +11,6 @@
 - [ ] Completar `CONTRIBUTING.md` con pasos para generar/validar placeholders y checklist de PR (ya iniciada, revisar detalles añadidos).
 - [ ] Opcional: añadir badge de estado CI en `README.md` (requiere URL del workflow / branch).
 
----
-
 ## Completados / Implementado
 
 - [x] Página de inicio (`/`) — Hero (imagen principal + carrusel), Secciones informativas (Nosotros, Cuerpos, Calendario, Galería, Noticias), Contacto, CTA y Footer (implementado; usa `getBlur('/file.svg')`).
