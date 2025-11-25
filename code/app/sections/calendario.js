@@ -4,7 +4,7 @@ import Section from '../componentes/section';
 const servicios = () => {
   return (
     <Section id="calendario" className="max-w-4xl mx-auto py-12 px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-gray-900 dark:text-white">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-foreground">
         Calendario y actividades
       </h2>
       <p className="text-center mb-6">

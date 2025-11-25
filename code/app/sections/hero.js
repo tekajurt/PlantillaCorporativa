@@ -30,12 +30,12 @@ const Hero = () => {
           Escuela de Carnaval <span className="text-pink-300">Arcoíris</span>
         </h1>
         {/* commit-test: no-op comment to verify pre-commit hooks */}
-        <p className="text-lg text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
+        <p className="text-lg text-muted max-w-2xl mx-auto">
           Color, ritmo y tradición: formando el carnaval del mañana
         </p>
       </div>
 
-      <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 mt-8 sm:mt-12 max-w-2xl mx-auto">
+      <p className="text-base sm:text-lg md:text-xl text-muted mt-8 sm:mt-12 max-w-2xl mx-auto">
         Bienvenido a la Escuela de Carnaval Arcoíris. Aquí te invitamos a ser parte de nuestra
         tradición: ensayos, talleres y presentaciones para todas las edades.
       </p>

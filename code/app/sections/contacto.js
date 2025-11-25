@@ -6,9 +6,7 @@ import Textarea from '../../components/ui/Textarea';
 const contacto = () => {
   return (
     <Section id="contacto" className="max-w-2xl mx-auto py-12 px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-gray-900 dark:text-white">
-        Contacto
-      </h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-foreground">Contacto</h2>
       <p className="text-center mb-4">
         Escríbenos para consultas sobre inscripciones, talleres o presentaciones.
       </p>
@@ -34,7 +32,7 @@ const contacto = () => {
       <div className="mt-6 text-sm text-center">
         <p>
           Correo institucional:{' '}
-          <a href="mailto:info@carnaval-arcoiris.org" className="text-indigo-600">
+          <a href="mailto:info@carnaval-arcoiris.org" className="text-primary">
             info@carnaval-arcoiris.org
           </a>
         </p>

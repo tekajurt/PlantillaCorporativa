@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6 mt-auto">
+    <footer className="bg-card text-card-foreground py-6 mt-auto">
       <div className="container mx-auto text-center px-4">
         <p className="text-sm">
           &copy; {new Date().getFullYear()} Escuela de Carnaval Arcoíris. Todos los derechos
@@ -18,7 +18,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="text-pink-400"
+            className="text-accent"
           >
             Instagram
           </a>
@@ -27,7 +27,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
-            className="text-blue-400"
+            className="text-primary"
           >
             Facebook
           </a>
@@ -36,7 +36,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
-            className="text-red-400"
+            className="text-destructive"
           >
             YouTube
           </a>
