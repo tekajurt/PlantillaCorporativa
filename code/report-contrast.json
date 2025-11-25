@@ -1,0 +1,53 @@
+{
+  "timestamp": "2025-11-25T15:28:21.308Z",
+  "results": [
+    {
+      "pair": "background / foreground",
+      "a": "#071022",
+      "b": "#e6eef8",
+      "ratio": 16.22588713026118
+    },
+    {
+      "pair": "card / card-foreground",
+      "a": "#0b1220",
+      "b": "#e6eef8",
+      "ratio": 16.00368497108461
+    },
+    {
+      "pair": "popover / popover-foreground",
+      "a": "#0b1220",
+      "b": "#e6eef8",
+      "ratio": 16.00368497108461
+    },
+    {
+      "pair": "primary / primary-foreground",
+      "a": "#60a5fa",
+      "b": "#071022",
+      "ratio": 7.466525546394087
+    },
+    {
+      "pair": "secondary / secondary-foreground",
+      "a": "#9ca3af",
+      "b": "#071022",
+      "ratio": 7.477058370299708
+    },
+    {
+      "pair": "accent / accent-foreground",
+      "a": "#f472b6",
+      "b": "#071022",
+      "ratio": 7.167484804588212
+    },
+    {
+      "pair": "sidebar / sidebar-foreground",
+      "a": "#071022",
+      "b": "#e6eef8",
+      "ratio": 16.22588713026118
+    },
+    {
+      "pair": "muted / muted-foreground",
+      "a": "#475569",
+      "b": "#94a3b8",
+      "ratio": 2.955359449976296
+    }
+  ]
+}
