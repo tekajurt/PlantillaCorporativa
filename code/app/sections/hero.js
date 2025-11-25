@@ -23,6 +23,7 @@ const Hero = () => {
           width={800}
           height={300}
           className="rounded-lg shadow-lg w-full max-w-2xl mx-auto object-cover"
+          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 80vw, 800px"
           placeholder="blur"
           blurDataURL={getBlur('/vercel.svg')}
         />
@@ -50,6 +51,8 @@ const Hero = () => {
               width={500}
               height={300}
               className="rounded-lg shadow-lg"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              loading="lazy"
               placeholder="blur"
               blurDataURL={getBlur('/file.svg')}
             />
@@ -61,6 +64,8 @@ const Hero = () => {
               width={500}
               height={300}
               className="rounded-lg shadow-lg"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              loading="lazy"
               placeholder="blur"
               blurDataURL={getBlur('/favicon.ico')}
             />
@@ -72,6 +77,8 @@ const Hero = () => {
               width={500}
               height={300}
               className="rounded-lg shadow-lg"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              loading="lazy"
               placeholder="blur"
               blurDataURL={getBlur('/favicon.ico')}
             />
@@ -83,6 +90,8 @@ const Hero = () => {
               width={500}
               height={300}
               className="rounded-lg shadow-lg"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              loading="lazy"
               placeholder="blur"
               blurDataURL={getBlur('/favicon.ico')}
             />

@@ -47,6 +47,8 @@ export default function GalleryModal({ open, image, alt, blurDataURL, onClose })
             width={1200}
             height={800}
             className="w-full h-auto object-contain"
+            sizes="(max-width: 1024px) 90vw, 1200px"
+            loading="lazy"
             placeholder="blur"
             blurDataURL={blurDataURL}
           />

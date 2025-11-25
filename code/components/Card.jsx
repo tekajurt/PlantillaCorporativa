@@ -39,6 +39,8 @@ export default function Card({
             width={imageWidth}
             height={imageHeight}
             className="w-full h-full object-cover"
+            sizes="(max-width: 640px) 100vw, 50vw"
+            loading="lazy"
             placeholder="blur"
             blurDataURL={blurDataURL || defaultBlur}
           />

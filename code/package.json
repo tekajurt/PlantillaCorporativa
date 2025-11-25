@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "check:contrast": "node scripts/contrast-check.js",
+    "check:contrast": "node scripts/contrast-check.cjs",
     "generate-blur": "node scripts/generate-blur.js",
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",

@@ -21,7 +21,8 @@ describe('a11y: basic components', () => {
   });
 
   test('Contact input (UI) has no axe violations', async () => {
-    const { container } = render(<ContactForm />);
+    // Input expects a label prop for accessibility; provide it in the test
+    const { container } = render(<ContactForm id="test-input" label="Nombre" />);
     const results = await axe(container);
     expect(results).toHaveNoViolations();
   });

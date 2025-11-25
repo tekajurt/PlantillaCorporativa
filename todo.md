@@ -3,7 +3,7 @@
 ## Pendientes (prioridad alta → baja)
 
 - [ ] Accesibilidad: auditoría a11y (axe, `eslint-plugin-jsx-a11y`) — revisar componentes migrados y reglas de a11y.
-- [ ] Theming: pulir modo `dark` y variables en `code/styles/tokens.css` (contraste y tests visuales).
+- [x] Theming: pulir modo `dark` y variables en `code/styles/tokens.css` (contraste y tests visuales).
 - [ ] Performance: optimizar imágenes (revisar `next/image` sizes, lazy/priority) y ejecutar bundle analyzer.
 - [ ] Seguridad: `npm audit` y plan de mitigación; añadir cabeceras de seguridad en respuestas (CSP, HSTS, etc.).
 - [ ] I18n: preparar estructura de locales y evaluar `next-intl` u otra solución de i18n.
