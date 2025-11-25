@@ -16,7 +16,9 @@
 - [x] Validar CI (Node 20+, lockfile y cache path correctos) — workflows revisados.
 - [ ] Accesibilidad: auditoría a11y (axe, `eslint-plugin-jsx-a11y`) pendiente.
 - [ ] Normalizar estilos: centralizar tokens (Tailwind / CSS variables) pendiente.
-- [ ] SEO & Social: `SEO` component, `sitemap.xml` y `robots.txt` pendientes.
+  - Nota: crear `code/styles/tokens.css` o `tailwind.config.mjs` tokens y migrar variables.
+- [x] Reemplazar sitemap/robots estáticos por rutas dinámicas y exportar `metadata` en `layout.js`.
+- [x] SEO & Social: `SEO` component, `sitemap.xml` y `robots.txt` pendientes.
 - [ ] Performance: optimizar imágenes, revisar bundle analyzer pendiente.
 - [ ] Seguridad: `npm audit` y plan de mitigación pendiente; añadir cabeceras de seguridad.
 - [ ] I18n: preparar estructura de locales y evaluar `next-intl` pendiente.

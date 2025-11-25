@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Allow indexing of sitemap
+Sitemap: https://example.com/sitemap.xml
