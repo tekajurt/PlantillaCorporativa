@@ -29,6 +29,7 @@ const Hero = () => {
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold drop-shadow-lg self-center">
           Escuela de Carnaval <span className="text-pink-300">Arcoíris</span>
         </h1>
+        {/* commit-test: no-op comment to verify pre-commit hooks */}
         <p className="text-lg text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
           Color, ritmo y tradición: formando el carnaval del mañana
         </p>
