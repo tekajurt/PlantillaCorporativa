@@ -56,8 +56,19 @@
     "lorem-ipsum": "^2.0.8",
     "postcss": "8.5.6",
     "prettier": "^3.6.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.0.3",
     "sharp": "^0.34.5",
     "tailwindcss": "4.1.17",
     "typescript": "^5.3.0"
+  },
+  "lint-staged": {
+    "*.+(js|jsx|ts|tsx|json|css|md)": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.+(png|jpg|jpeg|svg|gif|webp)": [
+      "prettier --write"
+    ]
   }
 }
