@@ -27,7 +27,7 @@ const servicios = () => {
       </ul>
       <div className="mt-6 text-center">
         <button
-          className="inline-block px-4 py-2 bg-indigo-600 text-white rounded"
+          className="inline-block px-4 py-2 bg-primary text-primary-foreground rounded"
           onClick={() => {
             alert('Función de agregar al calendario (placeholder)');
           }}

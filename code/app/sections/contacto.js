@@ -23,7 +23,7 @@ const contacto = () => {
         <Textarea id="mensaje" label="Mensaje" name="mensaje" rows={4} required />
         <button
           type="submit"
-          className="w-full py-2 px-4 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full py-2 px-4 bg-primary text-primary-foreground rounded hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/20"
         >
           Enviar
         </button>

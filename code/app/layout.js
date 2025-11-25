@@ -8,7 +8,7 @@ export const metadata = getDefaultMetadata();
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen w-full flex flex-col text-center bg-linear-to-r from-blue-900 to-blue-700 text-white">
+      <body className="min-h-screen w-full flex flex-col text-center bg-background text-foreground">
         <Header />
         <div className="flex-1 w-full pt-8 items-center">{children}</div>
         <Footer />

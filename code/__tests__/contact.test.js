@@ -10,7 +10,7 @@ describe('contact API', () => {
     // clean messages file
     try {
       await fs.unlink(MESSAGES_FILE);
-    } catch (e) {
+    } catch {
       // ignore
     }
   });

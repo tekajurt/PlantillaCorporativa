@@ -6,13 +6,13 @@ const Nav = () => {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => setOpen((prev) => !prev);
   return (
-    <nav className="bg-white w-full flex items-center justify-between px-4 py-2 shadow-md fixed top-0 left-0 z-10">
+    <nav className="bg-background w-full flex items-center justify-between px-4 py-2 shadow-md fixed top-0 left-0 z-10">
       {/* Logo o nombre de marca */}
-      <div className="font-bold text-lg text-blue-700">LOGO</div>
+      <div className="font-bold text-lg text-accent">LOGO</div>
       {/* Botón hamburguesa solo en mobile */}
       <button
         onClick={toggleMenu}
-        className="md:hidden flex items-center px-2 py-1 z-20 border rounded text-black hover:text-blue-600"
+        className="md:hidden flex items-center px-2 py-1 z-20 border-border rounded text-foreground hover:text-primary"
         aria-label="Abrir menú"
         aria-expanded={open}
         aria-controls="main-menu"
@@ -31,7 +31,7 @@ const Nav = () => {
       {/* Menú de navegación */}
       <div
         id="main-menu"
-        className={`absolute top-full left-0 w-full bg-white shadow-md transition-transform duration-300 md:static md:w-auto md:bg-transparent md:shadow-none md:transition-none ${
+        className={`absolute top-full left-0 w-full bg-card shadow-md transition-transform duration-300 md:static md:w-auto md:bg-transparent md:shadow-none md:transition-none ${
           open ? 'translate-y-0' : '-translate-y-96'
         } md:translate-y-0 flex flex-col md:flex-row md:items-center md:space-x-6`}
         style={{ zIndex: 9 }}

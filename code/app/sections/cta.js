@@ -13,7 +13,7 @@ const cta = () => {
       </p>
       <a
         href="#contacto"
-        className="inline-block px-6 py-3 bg-pink-500 text-white font-semibold rounded shadow hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-400"
+        className="inline-block px-6 py-3 bg-accent text-accent-foreground font-semibold rounded shadow hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-accent/20"
         onClick={(e) => {
           e.preventDefault();
           document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' });

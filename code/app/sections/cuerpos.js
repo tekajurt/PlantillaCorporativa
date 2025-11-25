@@ -10,7 +10,10 @@ const equipo = () => {
         y calendario propio. Selecciona un cuerpo para conocer más.
       </p>
 
-      <div id="figuras" className="w-full bg-green-600 p-6 rounded-md text-white shadow-md mt-6">
+      <div
+        id="figuras"
+        className="w-full bg-accent p-6 rounded-md text-accent-foreground shadow-md mt-6"
+      >
         <h3 className="text-2xl font-bold">Figuras</h3>
         <p className="mt-2">
           Las figuras representan el alma visual del desfile. Trabajan en vestuario, estructuras y
@@ -23,7 +26,7 @@ const equipo = () => {
         </ul>
       </div>
 
-      <div id="baile" className="w-full bg-red-600 p-6 rounded-md text-white shadow-md mt-6">
+      <div id="baile" className="w-full bg-destructive p-6 rounded-md text-white shadow-md mt-6">
         <h3 className="text-2xl font-bold">Baile</h3>
         <p className="mt-2">
           El cuerpo de baile se encarga de la coreografía y el movimiento. Practicamos distintos
@@ -36,7 +39,10 @@ const equipo = () => {
         </ul>
       </div>
 
-      <div id="banda" className="w-full bg-yellow-300 p-6 rounded-md text-black shadow-md mt-6">
+      <div
+        id="banda"
+        className="w-full bg-secondary p-6 rounded-md text-secondary-foreground shadow-md mt-6"
+      >
         <h3 className="text-2xl font-bold">Banda</h3>
         <p className="mt-2">
           La banda aporta el ritmo y la energía. Contamos con secciones de percusión, vientos y

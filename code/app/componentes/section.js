@@ -1,4 +1,4 @@
-const Section = ({ id, className = "", children }) => {
+const Section = ({ id, className = '', children }) => {
   // Si no quieres min-h-screen en todas las secciones, cámbialo por min-h-[...] o quítalo aquí.
   return (
     <div

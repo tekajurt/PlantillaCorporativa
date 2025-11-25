@@ -91,7 +91,7 @@ const Hero = () => {
         <div className="flex justify-center gap-4 mt-6">
           <a
             href="#cuerpos"
-            className="px-4 py-2 bg-pink-500 text-white rounded"
+            className="px-4 py-2 bg-accent text-accent-foreground rounded"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#cuerpos')?.scrollIntoView({ behavior: 'smooth' });
@@ -101,7 +101,7 @@ const Hero = () => {
           </a>
           <a
             href="#calendario"
-            className="px-4 py-2 bg-indigo-600 text-white rounded"
+            className="px-4 py-2 bg-primary text-primary-foreground rounded"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#calendario')?.scrollIntoView({ behavior: 'smooth' });
@@ -111,7 +111,7 @@ const Hero = () => {
           </a>
           <a
             href="#galeria"
-            className="px-4 py-2 bg-emerald-500 text-white rounded"
+            className="px-4 py-2 bg-secondary text-secondary-foreground rounded"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#galeria')?.scrollIntoView({ behavior: 'smooth' });
