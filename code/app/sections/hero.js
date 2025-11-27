@@ -1,7 +1,6 @@
 'use client';
 import Section from '../componentes/section.js';
 import Image from 'next/image';
-// import blurMap from '../../lib/blur-placeholders.json'; // removed: unused, use getBlur helper
 import getBlur from '../../lib/getBlur';
 import {
   Carousel,
@@ -13,94 +12,77 @@ import {
 
 const Hero = () => {
   return (
-    <Section id="hero" title="Bienvenido">
-      {/* HERO CONTENT */}
-      <div className="flex flex-col justify-center text-center gap-4">
-        <Image
-          priority
-          src="/vercel.svg"
-          alt="Desfile del carnaval"
-          width={800}
-          height={300}
-          className="rounded-lg shadow-lg w-full max-w-2xl mx-auto object-cover"
-          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 80vw, 800px"
-          placeholder="blur"
-          blurDataURL={getBlur('/vercel.svg')}
-        />
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold drop-shadow-lg self-center">
-          Escuela de Carnaval <span className="text-pink-300">Arcoíris</span>
-        </h1>
-        {/* commit-test: no-op comment to verify pre-commit hooks */}
-        <p className="text-lg text-muted max-w-2xl mx-auto">
-          Color, ritmo y tradición: formando el carnaval del mañana
+    <Section id="hero" className="text-left">
+      <div className="w-full max-w-3xl mx-auto text-center">
+        <h1 className="text-4xl sm:text-5xl font-extrabold">Color, ritmo y tradición</h1>
+        <p className="text-lg text-muted mt-4">
+          Formando el carnaval del mañana. Bienvenido a la Escuela de Carnaval Arcoíris — talleres,
+          ensayos y presentaciones para todas las edades.
         </p>
+        <div className="mt-6 flex justify-center gap-4">
+          <a href="#contact" className="btn btn-accent shadow md:h-12 md:px-6">
+            Contactar
+          </a>
+          <a href="#nosotros" className="btn btn-secondary">
+            Conócenos
+          </a>
+        </div>
       </div>
 
-      <p className="text-base sm:text-lg md:text-xl text-muted mt-8 sm:mt-12 max-w-2xl mx-auto">
-        Bienvenido a la Escuela de Carnaval Arcoíris. Aquí te invitamos a ser parte de nuestra
-        tradición: ensayos, talleres y presentaciones para todas las edades.
-      </p>
+      <div className="mt-8 w-full">
+        <div className="w-full rounded-lg overflow-hidden shadow-lg aspect-1200/500">
+          <Image
+            priority
+            src="/vercel.svg"
+            alt="Desfile del carnaval"
+            width={1200}
+            height={500}
+            className="w-full h-full object-cover"
+            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 80vw, 1200px"
+            placeholder="blur"
+            blurDataURL={getBlur('/vercel.svg')}
+          />
+        </div>
+      </div>
 
-      {/**\ Carousel */}
-      <Carousel className="w-full max-w-3xl mx-auto mt-8">
+      <Carousel className="w-full mt-8">
         <CarouselContent>
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <Image
-              src="/file.svg"
-              alt="Ensayo de figuras"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-lg"
-              sizes="(max-width: 640px) 100vw, 33vw"
-              loading="lazy"
-              placeholder="blur"
-              blurDataURL={getBlur('/file.svg')}
-            />
+            <div className="rounded-lg overflow-hidden shadow-md aspect-5/3">
+              <Image
+                src="/file.svg"
+                alt="Ensayo de figuras"
+                width={500}
+                height={300}
+                className="w-full h-full object-cover"
+                sizes="(max-width: 640px) 100vw, 33vw"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={getBlur('/file.svg')}
+              />
+            </div>
           </CarouselItem>
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <Image
-              src="/favicon.ico"
-              alt="Hero Image"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-lg"
-              sizes="(max-width: 640px) 100vw, 33vw"
-              loading="lazy"
-              placeholder="blur"
-              blurDataURL={getBlur('/favicon.ico')}
-            />
-          </CarouselItem>
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <Image
-              src="/favicon.ico"
-              alt="Hero Image"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-lg"
-              sizes="(max-width: 640px) 100vw, 33vw"
-              loading="lazy"
-              placeholder="blur"
-              blurDataURL={getBlur('/favicon.ico')}
-            />
-          </CarouselItem>
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <Image
-              src="/favicon.ico"
-              alt="Hero Image"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-lg"
-              sizes="(max-width: 640px) 100vw, 33vw"
-              loading="lazy"
-              placeholder="blur"
-              blurDataURL={getBlur('/favicon.ico')}
-            />
+            <div className="rounded-lg overflow-hidden shadow-md aspect-5/3">
+              <Image
+                src="/favicon.ico"
+                alt="Ensayo"
+                width={500}
+                height={300}
+                className="w-full h-full object-cover"
+                sizes="(max-width: 640px) 100vw, 33vw"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={getBlur('/favicon.ico')}
+              />
+            </div>
           </CarouselItem>
         </CarouselContent>
+
         <div className="flex justify-center gap-4 mt-6">
           <a
             href="#cuerpos"
-            className="px-4 py-2 bg-accent text-accent-foreground rounded"
+            className="btn btn-accent"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#cuerpos')?.scrollIntoView({ behavior: 'smooth' });
@@ -110,7 +92,7 @@ const Hero = () => {
           </a>
           <a
             href="#calendario"
-            className="px-4 py-2 bg-primary text-primary-foreground rounded"
+            className="btn btn-primary"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#calendario')?.scrollIntoView({ behavior: 'smooth' });
@@ -120,7 +102,7 @@ const Hero = () => {
           </a>
           <a
             href="#galeria"
-            className="px-4 py-2 bg-secondary text-secondary-foreground rounded"
+            className="btn btn-secondary"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#galeria')?.scrollIntoView({ behavior: 'smooth' });
@@ -129,10 +111,12 @@ const Hero = () => {
             Ver galería
           </a>
         </div>
+
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
     </Section>
   );
 };
+
 export default Hero;

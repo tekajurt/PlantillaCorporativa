@@ -18,7 +18,7 @@ const proyectos = () => {
     },
   ];
   return (
-    <Section id="blog">
+    <Section id="blog" className="text-left">
       <h2 className="text-2xl font-bold mb-4">Noticias</h2>
       <p className="mb-4">
         Últimas novedades de la Escuela: convocatorias, reconocimientos y fechas importantes.

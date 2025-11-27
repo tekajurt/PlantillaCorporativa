@@ -4,7 +4,7 @@ export default function Input({ id, label, ...props }) {
   return (
     <div className="w-full">
       {label && (
-        <label htmlFor={id} className="block text-sm font-medium text-muted mb-1">
+        <label htmlFor={id} className="block text-sm font-medium text-muted mb-2">
           {label}
         </label>
       )}

@@ -29,10 +29,12 @@ export default function Card({
       }
     : { className };
 
+  const aspectStyle = image ? { aspectRatio: `${imageWidth} / ${imageHeight}` } : {};
+
   return (
-    <article {...rootProps} className={cn('bg-card rounded-lg shadow p-6', rootProps.className)}>
+    <article {...rootProps} className={cn('bg-card rounded-lg shadow-md p-6', rootProps.className)}>
       {image && (
-        <div className="mb-4 overflow-hidden rounded relative" style={{ height: imageHeight }}>
+        <div className="mb-4 overflow-hidden rounded relative w-full" style={aspectStyle}>
           <Image
             src={image}
             alt={title || ''}

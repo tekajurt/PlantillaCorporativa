@@ -70,7 +70,7 @@ async function main() {
   const results = [];
   for (const f of images) {
     process.stdout.write(`Optimizing ${path.relative(PUBLIC_DIR, f)} ... `);
-    // eslint-disable-next-line no-await-in-loop
+     
     const r = await processFile(f);
     if (r) {
       results.push(r);

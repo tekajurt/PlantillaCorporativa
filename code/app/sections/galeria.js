@@ -45,7 +45,7 @@ const Galeria = () => {
   };
 
   return (
-    <Section id="galeria">
+    <Section id="galeria" className="text-left">
       <h2 className="text-2xl font-bold mb-4">Galería multimedia</h2>
       <p className="mb-4">
         Fotos y videos organizados por año y por cuerpo (Figuras, Baile, Banda). Aquí mostramos una

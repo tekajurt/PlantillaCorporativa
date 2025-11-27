@@ -26,8 +26,9 @@
   --destructive: #ef4444; /* rojo */
 
   /* States / borders */
-  --muted: #6b7280;
-  --muted-foreground: #374151;
+  /* Ajuste para mejorar contraste WCAG AA en texto "muted" */
+  --muted: #4b5563; /* gray-600 */
+  --muted-foreground: #0b1220; /* usar color de foreground para legibilidad */
   --border: rgba(15, 17, 32, 0.08);
   --input: rgba(15, 17, 32, 0.06);
   --ring: rgba(37, 99, 235, 0.35);
@@ -69,7 +70,7 @@
   --destructive: #f87171;
 
   --muted: #475569;
-  --muted-foreground: #94a3b8;
+  --muted-foreground: #e6eef8;
   --border: rgba(230, 238, 248, 0.06);
   --input: rgba(230, 238, 248, 0.04);
   --ring: rgba(96, 165, 250, 0.18);

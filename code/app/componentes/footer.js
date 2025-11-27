@@ -12,7 +12,7 @@ const Footer = () => {
             info@carnaval-arcoiris.org
           </a>
         </p>
-        <div className="mt-3 flex justify-center gap-4">
+        <div className="mt-6 flex justify-center gap-4">
           <a
             href="https://instagram.com"
             target="_blank"

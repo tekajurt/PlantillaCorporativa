@@ -10,7 +10,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="min-h-screen w-full flex flex-col text-center bg-background text-foreground">
         <Header />
-        <div className="flex-1 w-full pt-8 items-center">{children}</div>
+        {/* Reserve space matching header height (h-16) to avoid content being hidden under sticky header */}
+        <div className="flex-1 w-full pt-16 items-center">{children}</div>
         <Footer />
       </body>
     </html>

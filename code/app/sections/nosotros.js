@@ -6,7 +6,7 @@ import getBlur from '../../lib/getBlur';
 
 const nosotros = () => {
   return (
-    <Section id="nosotros">
+    <Section id="nosotros" className="text-left">
       <h2 className="text-3xl font-bold">Quiénes somos</h2>
       <p className="text-base mt-2">
         La <strong>Escuela de Carnaval Arcoíris</strong> nace en 1998 con el objetivo de preservar y
@@ -42,15 +42,17 @@ const nosotros = () => {
         </p>
       </div>
       <div className="relative w-full md:w-1/2 flex justify-center items-center mx-auto mt-8">
-        <Image
-          src="/file.svg"
-          alt="Archivo historico del carnaval"
-          width={700}
-          height={400}
-          className="max-w-full rounded-lg shadow-lg"
-          placeholder="blur"
-          blurDataURL={getBlur('/file.svg')}
-        />
+        <div className="w-full rounded-lg overflow-hidden aspect-7/4 max-w-[700px]">
+          <Image
+            src="/file.svg"
+            alt="Archivo historico del carnaval"
+            width={700}
+            height={400}
+            className="w-full h-full object-cover"
+            placeholder="blur"
+            blurDataURL={getBlur('/file.svg')}
+          />
+        </div>
       </div>
     </Section>
   );

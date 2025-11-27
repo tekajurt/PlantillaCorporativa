@@ -40,18 +40,20 @@ export default function GalleryModal({ open, image, alt, blurDataURL, onClose })
         >
           Cerrar
         </button>
-        <div className="bg-card rounded-lg p-2">
-          <Image
-            src={image}
-            alt={alt || ''}
-            width={1200}
-            height={800}
-            className="w-full h-auto object-contain"
-            sizes="(max-width: 1024px) 90vw, 1200px"
-            loading="lazy"
-            placeholder="blur"
-            blurDataURL={blurDataURL}
-          />
+        <div className="bg-card rounded-lg p-2 shadow-md">
+          <div className="w-full overflow-hidden aspect-3/2">
+            <Image
+              src={image}
+              alt={alt || ''}
+              width={1200}
+              height={800}
+              className="w-full h-full object-contain"
+              sizes="(max-width: 1024px) 90vw, 1200px"
+              loading="lazy"
+              placeholder="blur"
+              blurDataURL={blurDataURL}
+            />
+          </div>
         </div>
       </div>
     </div>

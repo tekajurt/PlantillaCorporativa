@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-25T15:28:21.308Z",
+  "timestamp": "2025-11-26T01:02:02.446Z",
   "results": [
     {
       "pair": "background / foreground",
@@ -46,8 +46,8 @@
     {
       "pair": "muted / muted-foreground",
       "a": "#475569",
-      "b": "#94a3b8",
-      "ratio": 2.955359449976296
+      "b": "#e6eef8",
+      "ratio": 6.4770534779649624
     }
   ]
 }

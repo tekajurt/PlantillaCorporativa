@@ -1,32 +1,54 @@
-# TODO — Plantilla Corporativa (Ideas y plan de desarrollo)
+# TODO — Plantilla Corporativa (Revisión y plan ordenado)
 
-## Pendientes (prioridad alta → baja)
+> Estado: tareas registradas también en el gestor de TODOs (para seguimiento). A continuación se muestra la lista reordenada por prioridad y el estado actualizado.
 
-- [ ] Accesibilidad: auditoría a11y (axe, `eslint-plugin-jsx-a11y`) — revisar componentes migrados y reglas de a11y.
-- [x] Theming: pulir modo `dark` y variables en `code/styles/tokens.css` (contraste y tests visuales).
-- [ ] Performance: optimizar imágenes (revisar `next/image` sizes, lazy/priority) y ejecutar bundle analyzer.
-- [ ] Seguridad: `npm audit` y plan de mitigación; añadir cabeceras de seguridad en respuestas (CSP, HSTS, etc.).
-- [ ] I18n: preparar estructura de locales y evaluar `next-intl` u otra solución de i18n.
-- [ ] Pre-commit / prepush hooks: comprobar `husky` + `lint-staged` en entornos de colaboradores y documentar instalación.
-- [ ] Completar `CONTRIBUTING.md` con pasos para generar/validar placeholders y checklist de PR (ya iniciada, revisar detalles añadidos).
-- [ ] Opcional: añadir badge de estado CI en `README.md` (requiere URL del workflow / branch).
+## Prioridad Alta
 
-## Completados / Implementado
+- [ ] Accesibilidad — auditoría completa (axe, `eslint-plugin-jsx-a11y`): ejecutar tests automáticos y revisión manual de componentes migrados (`code/components`, `code/app/componentes`).
+- [ ] Revisar Header / Nav: ajustar `pt-` en `layout.js`, confirmar `h-16`, y validar `z-index` del header y menú móvil.
+- [ ] Unificar contenedores: aplicar `max-w-6xl mx-auto px-4` o `container` consistentemente en secciones y documentarlo.
+- [ ] Espaciado vertical — escala: homologar `gap`/`mt` y revisar uso de `min-h-screen` en `Section`.
 
-- [x] Página de inicio (`/`) — Hero (imagen principal + carrusel), Secciones informativas (Nosotros, Cuerpos, Calendario, Galería, Noticias), Contacto, CTA y Footer (implementado; usa `getBlur('/file.svg')`).
-- [x] Añadir `priority` a la imagen principal del Hero (mejorar LCP).
-- [x] Helper `getBlur()` implementado y documentado en `code/lib/getBlur.js` / `README.md`.
-- [x] Scripts para placeholders: `generate-blur` y `validate-blur` añadidos en `code/package.json` (ejecutar para completar mapping y commitear `code/lib/blur-placeholders.json`).
-- [x] Galería + Modal (`GalleryModal`, `Card`) implementados y pasan `blurDataURL` (verificar focus-trap / roles ARIA).
-- [x] Formulario y API mínima: `POST /api/contact` implementado en `code/app/api/contact/route.js` (persistencia demo en `code/data/messages.json`).
-- [x] Tests: unitarios y de UI añadidos para `getBlur`, `Header`, `Section`, `Card`, `GalleryModal` y `Contact` (incluye tests de formulario y modal).
-- [x] `test:unit` script añadido en `code/package.json` y la suite de tests local pasa (`cd code && npm test`).
-- [x] CI workflow actualizado: `.github/workflows/ci.yml` ejecuta `npm run test:unit` antes del build y usa `code/package-lock.json` para cache.
-- [x] ESLint migrado a flat config (`code/eslint.config.cjs`) y `@typescript-eslint` añadido.
-- [x] `eslint` + `prettier` + `lint-staged` + `husky` (configuración principal aplicada; documentar instalación local pendiente).
-- [x] Scripts convertidos a ESM donde aplicaba (`code/scripts`).
-- [x] `engines.node` añadido en `code/package.json` (Node >=20.9.0).
-- [x] Validar CI (Node 20+, lockfile y cache path correctos) — workflows revisados.
-- [x] Normalizar estilos: tokens creados en `code/styles/tokens.css` y mapeados en `code/tailwind.config.mjs` (migración parcial/completa en componentes principales).
-- [x] Reemplazar sitemap/robots estáticos por rutas dinámicas y exportar `metadata` en `layout.js`.
-- [x] `README.md` actualizado con documentación de `getBlur`, API `POST /api/contact` y sección CI.
+## Prioridad Media
+
+- [ ] Focus rings y estados: mejorar `:focus-visible` en `code/app/globals.css` y probar navegación por teclado.
+- [ ] Menú móvil — z-index y hit targets: ajustar spacing y accesibilidad del toggle de tema.
+- [ ] Imágenes — optimización y proporciones: revisar `next/image` `sizes`, `priority`, `blurDataURL` por imagen y usar `aspect-ratio` para evitar CLS.
+- [ ] Render-blocking CSS — mitigar: revisar `/_next/static/chunks/428464902ddf8cc2.css` y cargar no bloqueante.
+- [ ] Legacy JS — revisar build targets (posible ahorro ≈13 KiB detectado por Lighthouse).
+
+## Prioridad Baja / Operacional
+
+- [ ] Pre-commit hooks — verificar `husky` + `lint-staged` y documentar instalación local.
+- [ ] CI — integrar checks finales (`test`, `contrast-check`, `validate-blur`, `npm audit`) y añadir badge cuando esté estable.
+- [ ] Completar `CONTRIBUTING.md`: pasos para generar/validar placeholders, checklist de PR y convenciones.
+- [ ] Seguridad — `npm audit` y plan de mitigación; añadir cabeceras de seguridad (CSP/HSTS) si procede.
+- [ ] I18n — preparar estructura de locales y evaluar `next-intl`.
+- [ ] Opcional: Bundle analyzer y treemap para optimizar bundles.
+- [ ] Badge CI en `README` (opcional) una vez el workflow esté estable.
+
+## QA / Validación final
+
+- [ ] QA visual final (z-index, overlays, modales) en varios breakpoints.
+- [ ] Ejecutar `generate-blur` y `validate-blur` para completar/validar `code/lib/blur-placeholders.json` y añadir validación en CI.
+
+## Completados (verificados)
+
+- [x] Theming y tokens: `code/styles/tokens.css` y mapeo en `code/tailwind.config.mjs`.
+- [x] Selector tema (light/dark) en navegación con persistencia.
+- [x] Home/Secciones: Hero, Galería, Contacto, CTA implementados; `getBlur` usado y `priority` en la imagen principal.
+- [x] Helper `getBlur()` y placeholders: `code/lib/getBlur.js`, `code/lib/blur-placeholders.json` y scripts scaffold añadidos.
+- [x] Galería/Card/Modal implementados con `blurDataURL`.
+- [x] Formulario y API `POST /api/contact` implementados (demo persistencia `code/data/messages.json`).
+- [x] Tests (Jest/RTL) añadidos y suite pasa; `test:unit` funciona.
+- [x] CI workflow básico: `.github/workflows/ci.yml` ejecuta tests.
+- [x] ESLint (flat) y Prettier + Husky + lint-staged (configuración aplicada).
+- [x] Scripts ESM y `engines.node` especificado.
+- [x] `README.md` actualizado con `getBlur` y API docs.
+
+---
+
+Notas:
+
+- He movido y consolidado las tareas para facilitar seguimiento. Muchas tareas están ya implementadas (sección "Completados").
+- Si quieres, sincronizo la sección "Prioridad Alta" con issues o creo ramas para empezar a trabajar en el primer ítem.
