@@ -7,7 +7,7 @@ import getBlur from '../../lib/getBlur';
 const nosotros = () => {
   return (
     <Section id="nosotros" className="text-left">
-      <h2 className="text-3xl font-bold">Quiénes somos</h2>
+      <h2 className="text-3xl font-bold mb-6">Quiénes somos</h2>
       <p className="text-base mt-2">
         La <strong>Escuela de Carnaval Arcoíris</strong> nace en 1998 con el objetivo de preservar y
         transmitir la tradición del carnaval local. Somos una comunidad diversa de bailarines/as,
@@ -35,7 +35,7 @@ const nosotros = () => {
           Formar y acompañar a nuevas generaciones en el arte del carnaval, combinando tradición y
           creatividad, con inclusión y respeto por nuestras raíces.
         </p>
-        <h3 className="text-2xl font-bold mt-4">Visión</h3>
+        <h3 className="text-2xl font-bold mt-6">Visión</h3>
         <p className="text-sm">
           Ser un referente cultural que impulse el desarrollo artístico local y la participación
           comunitaria en festividades populares.

@@ -35,7 +35,7 @@ export default function GalleryModal({ open, image, alt, blurDataURL, onClose })
       <div ref={ref} tabIndex={-1} className="max-w-4xl w-full max-h-[90vh] overflow-auto">
         <button
           aria-label="Cerrar"
-          className="mb-4 bg-input/60 text-foreground px-3 py-1 rounded"
+          className="mb-6 bg-input/60 text-foreground px-3 py-1 rounded"
           onClick={onClose}
         >
           Cerrar

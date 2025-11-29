@@ -1,6 +1,6 @@
 # Auditoría de espaciado — resumen
 
-Fecha: 2025-11-25
+Fecha: 2025-11-29
 
 Objetivo: detectar patrones de `margin`/`padding` vertical y proponer una escala uniforme para mejorar ritmo visual.
 
@@ -23,11 +23,13 @@ Recomendación de escala (propuesta):
 - Elementos compactos (form fields, labels): `mb-1` o `mb-2`.
 - Botones y CTAs: `mt-6` para separación de bloque.
 
-Cambios aplicados automáticamente (conservadores):
+Cambios aplicados automáticamente (conservadores) — actualizados el 2025-11-29:
 
-- `code/components/Nav.jsx`: `gap-4` → `gap-6`; mobile menu `gap-2` → `gap-4`.
-- `code/app/componentes/footer.js`: `mt-3` → `mt-6`.
-- `code/app/componentes/section.js`: ya contiene `gap-6` y `py-12` (previamente actualizado).
+- `code/app/sections/cta.js`: `h2` `mb-4` → `mb-6`.
+- `code/app/sections/contacto.js`: párrafo descriptivo `mb-4` → `mb-6`.
+- `code/app/sections/galeria.js`: `h2` y `p` `mb-4` → `mb-6`.
+
+Nota: se hicieron cambios puntuales y conservadores para alinear títulos y párrafos descriptivos con la política elegida (ver sección "Política aplicada" más abajo). Otras recomendaciones del audit siguen pendientes para revisión en batch.
 
 Siguientes pasos recomendados:
 

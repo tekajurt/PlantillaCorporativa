@@ -6,7 +6,7 @@ const cta = () => {
   return (
     <Section id="cta" className="py-12 text-center">
       <div className="w-full max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">
           ¿Listo para participar?
         </h2>
         <p className="mb-6 text-muted">

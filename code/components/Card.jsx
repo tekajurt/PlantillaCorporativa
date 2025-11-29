@@ -34,7 +34,7 @@ export default function Card({
   return (
     <article {...rootProps} className={cn('bg-card rounded-lg shadow-md p-6', rootProps.className)}>
       {image && (
-        <div className="mb-4 overflow-hidden rounded relative w-full" style={aspectStyle}>
+        <div className="mb-6 overflow-hidden rounded relative w-full" style={aspectStyle}>
           <Image
             src={image}
             alt={title || ''}
@@ -48,7 +48,7 @@ export default function Card({
           />
         </div>
       )}
-      {title && <h3 className="text-lg font-semibold mb-2 text-foreground">{title}</h3>}
+      {title && <h3 className="text-lg font-semibold mb-4 text-foreground">{title}</h3>}
       <div className="text-muted">{children}</div>
     </article>
   );

@@ -4,7 +4,7 @@ import Section from '../componentes/section';
 const equipo = () => {
   return (
     <Section id="cuerpos" className="text-left">
-      <h2 className="text-3xl font-bold">Cuerpos del carnaval</h2>
+      <h2 className="text-3xl font-bold mb-6">Cuerpos del carnaval</h2>
       <p className="mt-2">
         Nuestra escuela se organiza en tres cuerpos principales. Cada uno tiene identidad, talleres
         y calendario propio. Selecciona un cuerpo para conocer más.

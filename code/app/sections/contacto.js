@@ -11,7 +11,7 @@ const contacto = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-foreground">
           Contacto
         </h2>
-        <p className="text-center mb-4">
+        <p className="text-center mb-6">
           Escríbenos para consultas sobre inscripciones, talleres o presentaciones.
         </p>
         <form

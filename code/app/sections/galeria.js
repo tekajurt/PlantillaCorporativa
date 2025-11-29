@@ -46,8 +46,8 @@ const Galeria = () => {
 
   return (
     <Section id="galeria" className="text-left">
-      <h2 className="text-2xl font-bold mb-4">Galería multimedia</h2>
-      <p className="mb-4">
+      <h2 className="text-2xl font-bold mb-6">Galería multimedia</h2>
+      <p className="mb-6">
         Fotos y videos organizados por año y por cuerpo (Figuras, Baile, Banda). Aquí mostramos una
         selección reciente.
       </p>

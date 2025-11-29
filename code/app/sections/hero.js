@@ -15,7 +15,7 @@ const Hero = () => {
     <Section id="hero" className="text-left">
       <div className="w-full max-w-3xl mx-auto text-center">
         <h1 className="text-4xl sm:text-5xl font-extrabold">Color, ritmo y tradición</h1>
-        <p className="text-lg text-muted mt-4">
+        <p className="text-lg text-muted mt-6">
           Formando el carnaval del mañana. Bienvenido a la Escuela de Carnaval Arcoíris — talleres,
           ensayos y presentaciones para todas las edades.
         </p>
