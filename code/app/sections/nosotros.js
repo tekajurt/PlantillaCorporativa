@@ -49,6 +49,7 @@ const nosotros = () => {
             width={700}
             height={400}
             className="w-full h-full object-cover"
+            sizes="(max-width: 768px) 100vw, 700px"
             placeholder="blur"
             blurDataURL={getBlur('/file.svg')}
           />

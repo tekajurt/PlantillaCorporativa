@@ -79,5 +79,8 @@
     "*.+(png|jpg|jpeg|svg|gif|webp)": [
       "prettier --write"
     ]
+  },
+  "overrides": {
+    "glob": "10.5.0"
   }
 }
