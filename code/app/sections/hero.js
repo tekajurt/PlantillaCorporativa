@@ -20,7 +20,14 @@ const Hero = () => {
           ensayos y presentaciones para todas las edades.
         </p>
         <div className="mt-6 flex justify-center gap-4">
-          <a href="#contact" className="btn btn-accent shadow md:h-12 md:px-6">
+          <a
+            href="#contacto"
+            className="btn btn-primary shadow md:h-12 md:px-6"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             Contactar
           </a>
           <a href="#nosotros" className="btn btn-secondary">
@@ -82,7 +89,7 @@ const Hero = () => {
         <div className="flex justify-center gap-4 mt-6">
           <a
             href="#cuerpos"
-            className="btn btn-accent"
+            className="btn btn-secondary"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#cuerpos')?.scrollIntoView({ behavior: 'smooth' });
@@ -92,7 +99,7 @@ const Hero = () => {
           </a>
           <a
             href="#calendario"
-            className="btn btn-primary"
+            className="btn btn-accent"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#calendario')?.scrollIntoView({ behavior: 'smooth' });
@@ -102,7 +109,7 @@ const Hero = () => {
           </a>
           <a
             href="#galeria"
-            className="btn btn-secondary"
+            className="btn btn-outline"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#galeria')?.scrollIntoView({ behavior: 'smooth' });

@@ -66,13 +66,16 @@
     @apply inline-flex items-center justify-center h-10 px-4 rounded-md text-sm font-medium focus:outline-none focus-visible:ring-2;
   }
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+    @apply bg-primary text-primary-foreground hover:bg-primary/80 transition-colors;
   }
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90;
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors;
   }
   .btn-accent {
-    @apply bg-accent text-accent-foreground hover:bg-accent/90;
+    @apply bg-accent text-accent-foreground hover:bg-accent/80 transition-colors;
+  }
+  .btn-outline {
+    @apply border border-primary text-primary bg-transparent hover:bg-primary/10 transition-colors;
   }
 }
 
