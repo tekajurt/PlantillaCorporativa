@@ -1,7 +1,8 @@
 'use client';
 import Section from '../componentes/section.js';
-import Image from 'next/image';
-import getBlur from '../../lib/getBlur';
+import { useI18n } from '@/app/i18n/I18nProvider.jsx';
+import { getImages } from '@/lib/imageCatalog';
+import NormalizedImage from '@/components/media/NormalizedImage';
 import {
   Carousel,
   CarouselContent,
@@ -11,117 +12,100 @@ import {
 } from '@/components/ui/carousel';
 
 const Hero = () => {
+  const { t } = useI18n();
+  const heroImages = getImages('hero') || [];
+  const cover = heroImages.find((i) => i.id === 'cover');
+  const slides = heroImages.filter((i) => i.id !== 'cover');
+
   return (
-    <Section id="hero" className="text-left">
-      <div className="w-full max-w-3xl mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl font-extrabold">Color, ritmo y tradición</h1>
-        <p className="text-lg text-muted mt-6">
-          Formando el carnaval del mañana. Bienvenido a la Escuela de Carnaval Arcoíris — talleres,
-          ensayos y presentaciones para todas las edades.
-        </p>
-        <div className="mt-6 flex justify-center gap-4">
+    <Section id="hero" className="text-center">
+      <div className="w-full max-w-3xl mx-auto text-center flex flex-col gap-6">
+        <h1 className="text-4xl sm:text-5xl font-extrabold">{t('hero.title')}</h1>
+        <p className="text-lg text-muted">{t('hero.subtitle')}</p>
+        <div className="flex justify-center gap-4">
           <a
             href="#contacto"
-            className="btn btn-primary shadow md:h-12 md:px-6"
+            className="btn btn-primary shadow px-4 py-2 sm:px-5 sm:py-2 md:px-6 whitespace-normal break-words text-sm sm:text-base"
             onClick={(e) => {
               e.preventDefault();
               document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            Contactar
+            {t('hero.cta.primary')}
           </a>
-          <a href="#nosotros" className="btn btn-secondary">
-            Conócenos
+          <a
+            href="#nosotros"
+            className="btn btn-secondary inline-flex items-center justify-center px-2 py-2 sm:px-4 sm:py-2 whitespace-nowrap leading-normal text-xs sm:text-sm md:text-base min-h-[2.5rem]"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('#nosotros')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            {t('hero.cta.secondary')}
           </a>
         </div>
       </div>
 
-      <div className="mt-8 w-full">
-        <div className="w-full rounded-lg overflow-hidden shadow-lg aspect-1200/500">
-          <Image
-            priority
-            src="/vercel.svg"
-            alt="Desfile del carnaval"
-            width={1200}
-            height={500}
-            className="w-full h-full object-cover"
-            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 80vw, 1200px"
-            placeholder="blur"
-            blurDataURL={getBlur('/vercel.svg')}
-          />
+      {cover && (
+        <div className="w-full">
+          <NormalizedImage item={cover} alt={t('hero.cover.alt')} className="shadow-lg" />
         </div>
+      )}
+
+      {slides.length > 0 && (
+        <div>
+          <Carousel>
+            <CarouselContent>
+              {slides.map((img, idx) => (
+                <CarouselItem key={img.id} className="md:basis-1/2 lg:basis-1/3">
+                  <NormalizedImage
+                    item={img}
+                    alt={t(img.altKey || `hero.slide${idx + 1}.alt`)}
+                    className="shadow-md"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+      )}
+
+      <div className="flex justify-center gap-4">
+        <a
+          href="#cuerpos"
+          className="btn btn-secondary inline-flex items-center justify-center px-3 py-2 sm:px-4 sm:py-2 whitespace-nowrap leading-normal text-xs sm:text-sm md:text-base min-h-[2.5rem]"
+          onClick={(e) => {
+            e.preventDefault();
+            document.querySelector('#cuerpos')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          <span className="sm:hidden">{t('hero.cta.bodiesShort')}</span>
+          <span className="hidden sm:inline">{t('hero.cta.bodies')}</span>
+        </a>
+        <a
+          href="#calendario"
+          className="btn btn-accent inline-flex items-center justify-center px-3 py-2 sm:px-4 sm:py-2 whitespace-nowrap leading-normal text-xs sm:text-sm md:text-base min-h-[2.5rem]"
+          onClick={(e) => {
+            e.preventDefault();
+            document.querySelector('#calendario')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          <span className="sm:hidden">{t('hero.cta.eventsShort')}</span>
+          <span className="hidden sm:inline">{t('hero.cta.events')}</span>
+        </a>
+        <a
+          href="#galeria"
+          className="btn btn-outline px-4 py-2 sm:px-5 sm:py-2 whitespace-normal break-words text-xs sm:text-sm md:text-base"
+          onClick={(e) => {
+            e.preventDefault();
+            document.querySelector('#galeria')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          {t('hero.cta.gallery')}
+        </a>
       </div>
-
-      <Carousel className="w-full mt-8">
-        <CarouselContent>
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="rounded-lg overflow-hidden shadow-md aspect-5/3">
-              <Image
-                src="/file.svg"
-                alt="Ensayo de figuras"
-                width={500}
-                height={300}
-                className="w-full h-full object-cover"
-                sizes="(max-width: 640px) 100vw, 33vw"
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL={getBlur('/file.svg')}
-              />
-            </div>
-          </CarouselItem>
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="rounded-lg overflow-hidden shadow-md aspect-5/3">
-              <Image
-                src="/favicon.ico"
-                alt="Ensayo"
-                width={500}
-                height={300}
-                className="w-full h-full object-cover"
-                sizes="(max-width: 640px) 100vw, 33vw"
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL={getBlur('/favicon.ico')}
-              />
-            </div>
-          </CarouselItem>
-        </CarouselContent>
-
-        <div className="flex justify-center gap-4 mt-6">
-          <a
-            href="#cuerpos"
-            className="btn btn-secondary"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#cuerpos')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            Conocer los cuerpos
-          </a>
-          <a
-            href="#calendario"
-            className="btn btn-accent"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#calendario')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            Próximos eventos
-          </a>
-          <a
-            href="#galeria"
-            className="btn btn-outline"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#galeria')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            Ver galería
-          </a>
-        </div>
-
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
     </Section>
   );
 };

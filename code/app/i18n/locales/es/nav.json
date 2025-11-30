@@ -1,0 +1,12 @@
+{
+  "home": "Inicio",
+  "about": "Nosotros",
+  "bodies": "Cuerpos",
+  "gallery": "Galería",
+  "news": "Noticias",
+  "calendar": "Calendario",
+  "contact": "Contacto",
+  "cta": "Participa",
+  "logo": { "alt": "Escuela de Carnaval Arcoíris, logo" },
+  "theme": { "light": "Claro", "dark": "Oscuro" }
+}

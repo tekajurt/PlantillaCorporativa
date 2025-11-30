@@ -1,0 +1,22 @@
+{
+  "title": "Galería",
+  "intro": "Una selección de momentos y trabajos.",
+  "empty": "Aún no hay imágenes disponibles",
+  "items": [
+    {
+      "title": "Desfile 2025",
+      "body": "Momentos destacados del desfile 2025: color y creatividad.",
+      "alt": "Desfile 2025: carrozas y comparsas"
+    },
+    {
+      "title": "Taller de vestuario",
+      "body": "Imágenes del taller de construcción de estructuras y máscaras.",
+      "alt": "Taller de vestuario: máscaras y estructuras"
+    },
+    {
+      "title": "Ensayo de la banda",
+      "body": "Grabaciones y fotos de la sección musical en acción.",
+      "alt": "Ensayo de la banda: instrumentos y ritmo"
+    }
+  ]
+}

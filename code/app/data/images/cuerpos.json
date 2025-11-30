@@ -1,0 +1,38 @@
+[
+  {
+    "id": "figuras",
+    "src": "/images/placeholders/cuerpo-figuras.svg",
+    "width": 640,
+    "height": 400,
+    "aspect": "16/10",
+    "sizes": "(max-width: 640px) 100vw, (max-width: 768px) 80vw, 640px",
+    "priority": false,
+    "altKey": "cuerpos.figuras.title",
+    "placeholder": "blur",
+    "blur": "/images/placeholders/cuerpo-figuras.svg"
+  },
+  {
+    "id": "baile",
+    "src": "/images/placeholders/cuerpo-baile.svg",
+    "width": 640,
+    "height": 400,
+    "aspect": "16/10",
+    "sizes": "(max-width: 640px) 100vw, (max-width: 768px) 80vw, 640px",
+    "priority": false,
+    "altKey": "cuerpos.baile.title",
+    "placeholder": "blur",
+    "blur": "/images/placeholders/cuerpo-baile.svg"
+  },
+  {
+    "id": "banda",
+    "src": "/images/placeholders/cuerpo-banda.svg",
+    "width": 640,
+    "height": 400,
+    "aspect": "16/10",
+    "sizes": "(max-width: 640px) 100vw, (max-width: 768px) 80vw, 640px",
+    "priority": false,
+    "altKey": "cuerpos.banda.title",
+    "placeholder": "blur",
+    "blur": "/images/placeholders/cuerpo-banda.svg"
+  }
+]

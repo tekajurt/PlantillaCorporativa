@@ -1,0 +1,20 @@
+{
+  "title": "Quiénes somos",
+  "intro": "Somos una escuela comunitaria dedicada a preservar y enseñar el arte del carnaval, fomentando la participación, el aprendizaje y la alegría colectiva.",
+  "history": {
+    "title": "Nuestra historia",
+    "body": "Desde nuestros primeros pasacalles, hemos crecido hasta convertirnos en una escuela que ofrece formación en danza, música y técnicas de figuras."
+  },
+  "founders": {
+    "title": "Fundadores",
+    "items": ["María López", "Jorge Ramírez", "Ana Fernández"]
+  },
+  "mission": {
+    "title": "Misión",
+    "body": "Formar y acompañar a nuevas generaciones en el arte del carnaval, combinando tradición y creatividad, con inclusión y respeto por nuestras raíces."
+  },
+  "vision": {
+    "title": "Visión",
+    "body": "Ser un referente cultural que impulse el desarrollo artístico local y la participación comunitaria en festividades populares."
+  }
+}

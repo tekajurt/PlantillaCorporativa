@@ -1,0 +1,50 @@
+[
+  {
+    "id": "main",
+    "src": "/images/placeholders/nosotros.svg",
+    "width": 700,
+    "height": 400,
+    "aspect": "7/4",
+    "sizes": "(max-width: 640px) 100vw, (max-width: 768px) 80vw, 700px",
+    "priority": false,
+    "altKey": "nosotros.image.alt",
+    "placeholder": "blur",
+    "blur": "/images/placeholders/nosotros.svg"
+  },
+  {
+    "id": "founder-1",
+    "src": "/images/placeholders/founder-1.svg",
+    "width": 320,
+    "height": 320,
+    "aspect": "1/1",
+    "sizes": "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px",
+    "priority": false,
+    "altKey": "nosotros.founders.items.0",
+    "placeholder": "blur",
+    "blur": "/images/placeholders/founder-1.svg"
+  },
+  {
+    "id": "founder-2",
+    "src": "/images/placeholders/founder-2.svg",
+    "width": 320,
+    "height": 320,
+    "aspect": "1/1",
+    "sizes": "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px",
+    "priority": false,
+    "altKey": "nosotros.founders.items.1",
+    "placeholder": "blur",
+    "blur": "/images/placeholders/founder-2.svg"
+  },
+  {
+    "id": "founder-3",
+    "src": "/images/placeholders/founder-3.svg",
+    "width": 320,
+    "height": 320,
+    "aspect": "1/1",
+    "sizes": "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px",
+    "priority": false,
+    "altKey": "nosotros.founders.items.2",
+    "placeholder": "blur",
+    "blur": "/images/placeholders/founder-3.svg"
+  }
+]

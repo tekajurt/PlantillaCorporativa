@@ -1,10 +1,13 @@
+'use client';
+import { useI18n } from '../i18n/I18nProvider.jsx';
+
 const Footer = () => {
+  const { t } = useI18n();
   return (
     <footer className="bg-card text-card-foreground py-6 mt-auto">
       <div className="container mx-auto text-center px-4">
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Escuela de Carnaval Arcoíris. Todos los derechos
-          reservados.
+          &copy; {new Date().getFullYear()} {t('footer.copyright')}
         </p>
         <p className="text-xs mt-2">
           Contacto:{' '}

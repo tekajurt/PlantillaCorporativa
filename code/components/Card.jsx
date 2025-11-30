@@ -25,7 +25,10 @@ export default function Card({
             onClick(e);
           }
         },
-        className: cn('cursor-pointer', className),
+        className: cn(
+          'cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+          className
+        ),
       }
     : { className };
 

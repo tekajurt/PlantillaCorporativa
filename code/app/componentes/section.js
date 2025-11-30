@@ -3,9 +3,9 @@ const Section = ({ id, className = '', children }) => {
   return (
     <div
       {...(id ? { id } : {})}
-      className={`flex flex-col gap-6 w-full min-h-[60vh] py-12 justify-center items-center relative ${className}`}
+      className={`flex flex-col w-full min-h-[60vh] py-12 justify-center items-center relative ${className}`}
     >
-      <div className="w-full max-w-6xl mx-auto px-4">{children}</div>
+      <div className="w-full max-w-6xl mx-auto px-4 flex flex-col gap-6">{children}</div>
     </div>
   );
 };

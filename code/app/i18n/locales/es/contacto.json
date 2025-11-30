@@ -1,0 +1,14 @@
+{
+  "title": "Contacto",
+  "intro": "Escríbenos y te responderemos a la brevedad.",
+  "form": {
+    "name": { "label": "Nombre", "placeholder": "Tu nombre" },
+    "email": { "label": "Correo", "placeholder": "tu@correo.com" },
+    "message": { "label": "Mensaje", "placeholder": "Cuéntanos en qué te podemos ayudar" },
+    "submit": "Enviar"
+  },
+  "status": {
+    "success": "Mensaje enviado. Gracias por escribirnos.",
+    "error": "Hubo un error al enviar. Intenta nuevamente."
+  }
+}

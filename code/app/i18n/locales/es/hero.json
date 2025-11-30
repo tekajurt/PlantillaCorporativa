@@ -1,0 +1,22 @@
+{
+  "title": "Color, ritmo y tradición",
+  "subtitle": "Formando el carnaval del mañana. Talleres, ensayos y presentaciones para todas las edades.",
+  "cover": {
+    "alt": "Desfile del carnaval en portada"
+  },
+  "slide1": {
+    "alt": "Ensayo de figuras del carnaval"
+  },
+  "slide2": {
+    "alt": "Ensayo general del grupo de carnaval"
+  },
+  "cta": {
+    "primary": "Contactar",
+    "secondary": "Conócenos",
+    "events": "Próximos eventos",
+    "eventsShort": "Eventos",
+    "gallery": "Ver galería",
+    "bodies": "Conocer los cuerpos",
+    "bodiesShort": "Cuerpos"
+  }
+}

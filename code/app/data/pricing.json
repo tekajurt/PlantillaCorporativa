@@ -1,0 +1,17 @@
+{
+  "moneda": "EUR",
+  "niveles": [
+    {
+      "plan": "Mensual",
+      "precio": 40,
+      "incluye": ["1 taller semanal", "Acceso a eventos internos"]
+    },
+    {
+      "plan": "Trimestral",
+      "precio": 110,
+      "incluye": ["2 talleres semanales", "Prioridad en cupos"]
+    },
+    { "plan": "Anual", "precio": 400, "incluye": ["Acceso completo", "Descuentos especiales"] }
+  ],
+  "notas": ["Descuentos para menores de 12 años", "Becas sociales limitadas"]
+}

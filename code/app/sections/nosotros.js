@@ -1,61 +1,44 @@
+'use client';
 import Section from '../componentes/section';
-import Image from 'next/image';
-// import blurMap from '../../lib/blur-placeholders.json'; // removed: unused
-import getBlur from '../../lib/getBlur';
-// import { loremIpsum } from 'lorem-ipsum'; // removed: not used
+import { useI18n } from '@/app/i18n/I18nProvider.jsx';
+import NormalizedImage from '@/components/media/NormalizedImage';
+import { getImages } from '@/lib/imageCatalog';
 
-const nosotros = () => {
+const Nosotros = () => {
+  const { t, dict } = useI18n();
+  const imgs = getImages('nosotros');
+  const mainImg = imgs.find((i) => i.id === 'main');
   return (
-    <Section id="nosotros" className="text-left">
-      <h2 className="text-3xl font-bold mb-6">Quiénes somos</h2>
-      <p className="text-base mt-2">
-        La <strong>Escuela de Carnaval Arcoíris</strong> nace en 1998 con el objetivo de preservar y
-        transmitir la tradición del carnaval local. Somos una comunidad diversa de bailarines/as,
-        músicos/as y artesanos/as comprometidos con la cultura popular.
-      </p>
-      <div className="flex flex-col text-left mt-8 gap-4">
-        <h3 className="text-2xl font-bold">Nuestra historia</h3>
+    <Section id="nosotros" className="text-center">
+      <h2 className="text-3xl font-bold">{t('nosotros.title')}</h2>
+      <p className="text-base">{t('nosotros.intro')}</p>
+      <div className="flex flex-col items-center text-center gap-6">
+        <h3 className="text-2xl font-bold">{t('nosotros.history.title')}</h3>
 
-        <p className="text-sm mb-6">
-          Desde nuestros primeros pasacalles, hemos crecido hasta convertirnos en una escuela que
-          ofrece formación en danza, música y técnicas de figuras. Participamos anualmente en el
-          desfile regional y organizamos talleres abiertos a la comunidad.
-        </p>
-        <h3 className="text-2xl font-bold">Integrantes fundadores</h3>
+        <p className="text-sm mb-6">{t('nosotros.history.body')}</p>
+        <h3 className="text-2xl font-bold">{t('nosotros.founders.title')}</h3>
 
-        <ul className="list-disc list-inside">
-          <li className="mb-2">María Pérez — Coordinación general</li>
-          <li className="mb-2">Carlos Gómez — Dirección musical</li>
-          <li className="mb-2">Ana Ruiz — Coreografía</li>
+        <ul className="list-disc list-inside text-center">
+          {(dict.nosotros?.founders?.items || []).slice(0, 3).map((name, idx) => (
+            <li key={idx} className="mb-2">
+              {name}
+            </li>
+          ))}
         </ul>
       </div>
-      <div className="mt-6">
-        <h3 className="text-2xl font-bold">Misión</h3>
-        <p className="text-sm">
-          Formar y acompañar a nuevas generaciones en el arte del carnaval, combinando tradición y
-          creatividad, con inclusión y respeto por nuestras raíces.
-        </p>
-        <h3 className="text-2xl font-bold mt-6">Visión</h3>
-        <p className="text-sm">
-          Ser un referente cultural que impulse el desarrollo artístico local y la participación
-          comunitaria en festividades populares.
-        </p>
+      <div className="space-y-4">
+        <h3 className="text-2xl font-bold">{t('nosotros.mission.title')}</h3>
+        <p className="text-sm">{t('nosotros.mission.body')}</p>
+        <h3 className="text-2xl font-bold">{t('nosotros.vision.title')}</h3>
+        <p className="text-sm">{t('nosotros.vision.body')}</p>
       </div>
-      <div className="relative w-full md:w-1/2 flex justify-center items-center mx-auto mt-8">
-        <div className="w-full rounded-lg overflow-hidden aspect-7/4 max-w-[700px]">
-          <Image
-            src="/file.svg"
-            alt="Archivo historico del carnaval"
-            width={700}
-            height={400}
-            className="w-full h-full object-cover"
-            sizes="(max-width: 768px) 100vw, 700px"
-            placeholder="blur"
-            blurDataURL={getBlur('/file.svg')}
-          />
-        </div>
+      <div className="relative w-full md:w-1/2 flex justify-center items-center mx-auto">
+        <NormalizedImage
+          item={mainImg}
+          alt={t('nosotros.image.alt', { default: 'Archivo histórico del carnaval' })}
+        />
       </div>
     </Section>
   );
 };
-export default nosotros;
+export default Nosotros;

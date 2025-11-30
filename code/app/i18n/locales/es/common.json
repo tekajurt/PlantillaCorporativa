@@ -1,0 +1,9 @@
+{
+  "brand": "Escuela de Carnaval Arcoíris",
+  "status": {
+    "loading": "Cargando...",
+    "error": "Error. Intenta nuevamente.",
+    "success": "Acción completada."
+  },
+  "addToCalendar": "Agregar al calendario"
+}

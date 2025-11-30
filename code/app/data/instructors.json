@@ -1,0 +1,10 @@
+[
+  {
+    "id": "maria-perez",
+    "nombre": "María Pérez",
+    "especialidad": "Coordinación y producción",
+    "bioCorta": "Fundadora y enlace con instituciones culturales.",
+    "foto": "/instructores/maria.jpg",
+    "redes": { "instagram": "https://instagram.com/maria" }
+  }
+]

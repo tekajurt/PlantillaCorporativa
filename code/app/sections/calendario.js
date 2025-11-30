@@ -1,19 +1,18 @@
 'use client';
 import Section from '../componentes/section';
 import { Button } from '@/components/ui/button';
+import { useI18n } from '../i18n/I18nProvider.jsx';
 
-const servicios = () => {
+const Calendario = () => {
+  const { t } = useI18n();
   return (
-    <Section id="calendario" className="text-left py-12">
-      <div className="w-full max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-foreground">
-          Calendario y actividades
+    <Section id="calendario" className="text-center">
+      <div className="w-full max-w-4xl mx-auto flex flex-col gap-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground">
+          {t('calendario.title')}
         </h2>
-        <p className="text-center mb-6">
-          Consulta la agenda de ensayos, talleres y presentaciones. Añade los eventos importantes a
-          tu calendario personal.
-        </p>
-        <ul className="space-y-4 text-left">
+        <p className="text-center">{t('calendario.intro')}</p>
+        <ul className="space-y-4 text-center">
           <li>
             <strong>12 Mar 2026 — Ensayo general</strong>
             <p>Plaza Central — 18:00</p>
@@ -27,7 +26,7 @@ const servicios = () => {
             <p>Recinto Municipal — 20:00</p>
           </li>
         </ul>
-        <div className="mt-6 text-center">
+        <div className="text-center">
           <Button
             onClick={() => {
               alert('Función de agregar al calendario (placeholder)');
@@ -35,11 +34,11 @@ const servicios = () => {
             size="lg"
             variant="default"
           >
-            Agregar al calendario
+            {t('common.addToCalendar', { default: 'Agregar al calendario' })}
           </Button>
         </div>
       </div>
     </Section>
   );
 };
-export default servicios;
+export default Calendario;

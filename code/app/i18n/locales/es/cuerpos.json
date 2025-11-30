@@ -1,0 +1,16 @@
+{
+  "title": "Cuerpos del carnaval",
+  "intro": "Nuestra escuela se organiza en tres cuerpos principales. Cada uno tiene identidad, talleres y calendario propio.",
+  "figuras": {
+    "title": "Figuras",
+    "body": "Las figuras representan el alma visual del desfile. Trabajan en vestuario, estructuras y presencia escénica."
+  },
+  "baile": {
+    "title": "Baile",
+    "body": "El cuerpo de baile se encarga de la coreografía y el movimiento. Practicamos distintos estilos y formamos grupos por niveles."
+  },
+  "banda": {
+    "title": "Banda",
+    "body": "La banda aporta el ritmo y la energía. Secciones de percusión, vientos y bronces."
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "test-1",
+    "nombre": "Lucía R.",
+    "rol": "Integrante cuerpo de figuras",
+    "texto": "Aprendí a expresarme con materiales y diseño. La comunidad es increíble."
+  },
+  {
+    "id": "test-2",
+    "nombre": "Javier M.",
+    "rol": "Percusión",
+    "texto": "El ritmo me ayudó a ganar confianza y coordinación en equipo."
+  }
+]

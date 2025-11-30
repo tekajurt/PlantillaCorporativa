@@ -1,0 +1,10 @@
+{
+  "primary": {
+    "label": "Contactar",
+    "aria": "Ir a la sección de contacto"
+  },
+  "secondary": {
+    "label": "Conocer más",
+    "aria": "Ir a la sección sobre nosotros"
+  }
+}

@@ -2,6 +2,16 @@
 
 Plantilla de demo para una página corporativa construida con Next.js (App Router), Tailwind y componentes accesibles. Este README documenta las APIs y utilidades principales añadidas al proyecto.
 
+## Estado del Proyecto (MVP)
+
+El proyecto ha alcanzado su estado de MVP (Producto Mínimo Viable) con las siguientes características completadas:
+
+- **Layout Unificado**: Todas las secciones comparten una estructura consistente (`max-w-6xl`, `py-12`, `gap-6`).
+- **Accesibilidad**: Navegación completa por teclado (`focus-visible`), etiquetas ARIA y contraste validado.
+- **Optimización**: Carga de imágenes optimizada con `sizes` adaptativos y placeholders `blurDataURL`.
+- **Componentes UI**: Sistema de diseño basado en tokens (Tailwind) con soporte para modo oscuro.
+- **Infraestructura**: Tests unitarios (Jest), CI/CD básico y scripts de mantenimiento.
+
 ## Resumen rápido
 
 - Uso de `next/image` con placeholders generados (`blurDataURL`) para mejorar la carga percibida.
@@ -107,41 +117,65 @@ Dónde se guarda: `code/data/messages.json` (array con mensajes). Nota: en entor
 
 ---
 
-## Cómo probar localmente
+## Instalación y Ejecución (Desde Cero)
 
-1. Instala dependencias en la carpeta `code` y levanta la app:
+Sigue estos pasos para levantar el proyecto en tu entorno local.
+
+### 1. Prerrequisitos
+
+- **Node.js**: Versión 20 o superior.
+- **npm**: Incluido con Node.js.
+
+### 2. Instalación de dependencias
+
+El código fuente reside en la carpeta `code/`.
 
 ```bash
 cd code
 npm install
-npm run dev
 ```
 
-2. Generar placeholders (opcional pero recomendado):
+### 3. Gestión de Imágenes y Placeholders
+
+El proyecto utiliza un sistema de optimización de imágenes que requiere generar metadatos de "blur" (placeholders de baja resolución) antes de iniciar.
+
+**Paso crítico**: Generar el archivo `blur-placeholders.json`.
 
 ```bash
-cd code
+# Genera los placeholders para todas las imágenes en public/
 npm run generate-blur
 ```
 
-3. Probar envío de contacto (desde otra terminal):
+> Si omites este paso, podrías ver errores en consola relacionados con `getBlur` o imágenes sin efecto de carga suave.
+
+### 4. Servidor de Desarrollo
+
+Para iniciar el servidor en modo desarrollo (con Hot Reload):
 
 ```bash
-curl -X POST http://localhost:3000/api/contact \
-	-H "Content-Type: application/json" \
-	-d '{"name":"Test","email":"test@example.com","message":"Hola"}'
+npm run dev
 ```
 
-4. Ejecutar validación de placeholders (CI):
+La aplicación estará disponible en `http://localhost:3000`.
+
+### 5. Producción
+
+Para simular el entorno de producción localmente:
 
 ```bash
-cd code
-npm run validate-blur
+# 1. Construir la aplicación
+npm run build
+
+# 2. Iniciar el servidor optimizado
+npm start
 ```
 
----
+### 6. Otros Comandos Útiles
 
-Si quieres, puedo añadir ejemplos de uso para cada componente (Header, Section, Card) o generar una página `/docs` con la documentación auto-inyectada. ¿Prefieres que deje la documentación en `README.md` (como ahora) o que cree `docs/API.md` separado?
+- **Tests**: `npm test` (Ejecuta la suite completa con Jest).
+- **Linting**: `npm run lint` (Revisa estilo y errores con ESLint).
+- **Validar Blur**: `npm run validate-blur` (Verifica que todas las imágenes usadas tengan placeholder generado).
+- **Optimizar Imágenes**: `npm run optimize-images` (Comprime imágenes en `public/images` usando Sharp).
 
 ---
 

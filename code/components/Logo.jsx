@@ -1,20 +1,25 @@
 import React from 'react';
+import Image from 'next/image';
+import { useI18n } from '@/app/i18n/I18nProvider.jsx';
 
-export default function Logo({ className = '' }) {
+export default function Logo({
+  className = '',
+  src = '/images/placeholders/logo.svg',
+  altKey = 'nav.logo.alt',
+}) {
+  const { t } = useI18n?.() ?? { t: (k) => k };
   return (
     <div className={className} aria-hidden="false">
       <a href="#hero" className="inline-flex items-center gap-3 text-foreground font-semibold">
-        <svg
-          className="w-10 h-10 text-accent"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <circle cx="12" cy="12" r="10" fill="currentColor" />
-        </svg>
-        <span className="text-lg">Escuela de Carnaval Arcoíris</span>
+        <Image
+          src={src}
+          alt={t(altKey) || 'Logo'}
+          width={40}
+          height={40}
+          className="w-8 h-8 sm:w-8 sm:h-8 md:w-10 md:h-10"
+          priority
+        />
+        <span className="inline text-sm  md:hidden">Escuela de Carnaval Arcoíris</span>
       </a>
     </div>
   );

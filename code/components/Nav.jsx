@@ -108,7 +108,7 @@ export default function Nav({ sections = defaultSections, withLogo = false }) {
           <a
             key={s.href}
             href={s.href}
-            className="text-foreground hover:underline cursor-pointer"
+            className="text-foreground hover:underline cursor-pointer text-sm rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             onClick={(e) => {
               e.preventDefault();
               handleScroll(s.href);
@@ -123,7 +123,7 @@ export default function Nav({ sections = defaultSections, withLogo = false }) {
       <div className="hidden md:flex items-center">
         <button
           onClick={toggleTheme}
-          className="p-2 rounded-md text-foreground"
+          className="p-2 rounded-md text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           aria-pressed={isDark}
           aria-label={isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
           title={
@@ -157,7 +157,7 @@ export default function Nav({ sections = defaultSections, withLogo = false }) {
           aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={open}
           aria-controls="mobile-menu"
-          className="p-2 rounded-md text-foreground"
+          className="p-2 rounded-md text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? (
@@ -204,13 +204,13 @@ export default function Nav({ sections = defaultSections, withLogo = false }) {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
-          className="md:hidden absolute left-0 top-full w-full bg-card/95 shadow-md flex flex-col gap-4 py-4 z-60"
+          className="md:hidden absolute left-0 top-full w-full bg-card/95 shadow-md flex flex-col gap-4 py-4 z-40"
         >
           {sections.map((s) => (
             <a
               key={s.href}
               href={s.href}
-              className="text-foreground px-4 py-2 rounded hover:bg-muted/10 cursor-pointer"
+              className="text-foreground px-4 py-2 rounded hover:bg-muted/10 cursor-pointer text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               onClick={(e) => {
                 e.preventDefault();
                 handleScroll(s.href);
@@ -221,7 +221,7 @@ export default function Nav({ sections = defaultSections, withLogo = false }) {
           ))}
           <button
             onClick={toggleTheme}
-            className="text-foreground px-4 py-2 rounded text-left hover:bg-muted/10"
+            className="text-foreground px-4 py-2 rounded text-left hover:bg-muted/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             aria-pressed={isDark}
             aria-label={isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
           >

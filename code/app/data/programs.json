@@ -1,0 +1,18 @@
+[
+  {
+    "id": "iniciacion-baile",
+    "titulo": "Baile — Iniciación",
+    "descripcion": "Primer acercamiento a coordinación, ritmo básico y cuidado corporal.",
+    "duracionSemanas": 12,
+    "nivel": "Inicial",
+    "cupos": 25
+  },
+  {
+    "id": "percusion-intermedio",
+    "titulo": "Percusión — Intermedio",
+    "descripcion": "Estructuras rítmicas avanzadas y ensamble grupal.",
+    "duracionSemanas": 16,
+    "nivel": "Intermedio",
+    "cupos": 20
+  }
+]

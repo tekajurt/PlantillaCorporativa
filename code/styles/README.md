@@ -60,8 +60,7 @@ Siguiente paso recomendado
 Política de espaciado (aplicada)
 
 - Política adoptada (resumen): títulos de sección `mb-6`, separación entre bloques `mt-6`. `Section` mantiene `py-12` y `gap-6` internamente.
-- Cambios aplicados en esta pasada: `code/app/sections/cta.js`, `code/app/sections/contacto.js`, `code/app/sections/galeria.js` (títulos y párrafos ajustados a `mb-6`).
-- Motivo: normalizar ritmo visual sin introducir cambios grandes de golpe; revisar visualmente antes de aplicar transformaciones globales (por ejemplo `mt-10` → `mt-8`).
+- Todas las secciones (`hero`, `nosotros`, `galeria`, etc.) han sido unificadas para usar `flex flex-col gap-6` y eliminar márgenes manuales redundantes.
 
 Validaciones y accesibilidad
 

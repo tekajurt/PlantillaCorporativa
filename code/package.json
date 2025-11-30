@@ -19,6 +19,8 @@
     "test": "jest --passWithNoTests",
     "test:unit": "jest --passWithNoTests",
     "test:watch": "jest --watch",
+    "test:all": "npm run lint && npm run check:contrast && npm test",
+    "setup": "npm install && npm run generate-blur",
     "ci": "npm run lint && npm run build && npm test"
   },
   "dependencies": {
@@ -54,6 +56,7 @@
     "autoprefixer": "10.4.22",
     "axe-core": "^4.11.0",
     "babel-jest": "^30.2.0",
+    "baseline-browser-mapping": "^2.8.32",
     "eruda": "^3.4.3",
     "eslint": "^9.15.0",
     "eslint-config-next": "^16.0.5",

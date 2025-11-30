@@ -1,7 +1,7 @@
 export function getDefaultMetadata() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
-  const title = 'MiSitio';
-  const description = 'Proyecto web creado con Plantilla Corporativa';
+  const title = 'Escuela Arcoiris';
+  const description = 'Proyecto web creado con Daniel Hurtado';
 
   return {
     title,
@@ -11,7 +11,7 @@ export function getDefaultMetadata() {
       title,
       description,
       url: siteUrl,
-      siteName: 'MiSitio',
+      siteName: 'Escuela Arcoiris',
       images: [`${siteUrl.replace(/\/$/, '')}/vercel.svg`],
       locale: 'en_US',
       type: 'website',

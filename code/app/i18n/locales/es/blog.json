@@ -1,0 +1,19 @@
+{
+  "title": "Blog",
+  "intro": "Historias, aprendizajes y novedades del proyecto.",
+  "empty": "No hay artículos publicados todavía",
+  "items": [
+    {
+      "title": "Convocatoria abierta: Talleres 2026",
+      "body": "Inscripciones abiertas para talleres de figuras, danza y música. Cupos limitados."
+    },
+    {
+      "title": "Premio al mejor desfile",
+      "body": "Nuestra escuela obtuvo reconocimiento en el festival regional por su puesta en escena."
+    },
+    {
+      "title": "Nuevas fechas publicadas",
+      "body": "Consulta el calendario actualizado para los próximos ensayos y presentaciones."
+    }
+  ]
+}

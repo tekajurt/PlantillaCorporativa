@@ -2,6 +2,10 @@
 
 Gracias por querer contribuir a este proyecto. Antes de abrir un pull request por favor lee y sigue las indicaciones mínimas que aparecen a continuación.
 
+## Licencia
+
+Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
 **1) Placeholders de imagen (blurDataURL)**
 
 - El repositorio mantiene un mapeo de placeholders en `code/lib/blur-placeholders.json` usado por `next/image` como `blurDataURL`.

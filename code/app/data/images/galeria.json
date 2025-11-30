@@ -1,0 +1,38 @@
+[
+  {
+    "id": "g-0",
+    "src": "/images/placeholders/hero-slide-1.svg",
+    "width": 800,
+    "height": 450,
+    "aspect": "16/9",
+    "sizes": "(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw",
+    "priority": false,
+    "altKey": "galeria.items.0.alt",
+    "placeholder": "blur",
+    "blur": "/images/placeholders/hero-slide-1.svg"
+  },
+  {
+    "id": "g-1",
+    "src": "/images/placeholders/hero-slide-2.svg",
+    "width": 800,
+    "height": 450,
+    "aspect": "16/9",
+    "sizes": "(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw",
+    "priority": false,
+    "altKey": "galeria.items.1.alt",
+    "placeholder": "blur",
+    "blur": "/images/placeholders/hero-slide-2.svg"
+  },
+  {
+    "id": "g-2",
+    "src": "/images/placeholders/logo.svg",
+    "width": 800,
+    "height": 450,
+    "aspect": "16/9",
+    "sizes": "(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw",
+    "priority": false,
+    "altKey": "galeria.items.2.alt",
+    "placeholder": "blur",
+    "blur": "/images/placeholders/logo.svg"
+  }
+]
